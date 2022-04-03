@@ -57,6 +57,20 @@ module round(
 		end
 	 endtask;
 	 
+	 function automatic [63:0] shift_right;
+		 input [63:0] in;
+		 begin
+			shift_right = (in >>> shiftwidth_p0) | (in <<< (64 - shiftwidth_p0));
+		 end
+	 endfunction;
+	 
+	 function automatic [63:0] shift_left;
+		 input [63:0] in;
+		 begin
+			shift_left = (in <<< shiftwidth_p1) | (in >>> (64 - shiftwidth_p0));
+		 end
+	 endfunction;
+	 
 	 initial begin
 		state <= 0;
 		finished <= 0;
@@ -78,7 +92,8 @@ module round(
 			end
 			
 			SHIFT: begin
-				p1 <= p1 >>> shiftwidth_p0;
+				p1 <= shift_right(p1);
+				//p1 <= p1 >>> shiftwidth_p0;
 				inc_counter();
 			end
 			
@@ -88,7 +103,8 @@ module round(
 			end
 			
 			XOR_SUBKEY_SHIFT_P0: begin
-				p0 <= p0 <<< shiftwidth_p1;
+				//p0 <= p0 <<< shiftwidth_p1;
+				p0 <= shift_left(p0);
 				p1 <= p1 ^ subkey;
 			   inc_counter();
 			end

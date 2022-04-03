@@ -24,35 +24,25 @@ module tb_round_function(
 	 reg clk; 
 	 
 	 reg signal_start;
-	 	 reg signal_start2;
 	 reg [63:0] subkey;
-	 reg [127:0] plaintext;
-	 wire [127:0] plaintext2;
+	 //reg [127:0]plaintext = 128'hFF00FF00FF00FF00FF00FF00FF00FF00;
+	 reg [127:0]plaintext =  128'hdbbdd9bad6b7bfb223ba21bd2eb0474d;
 	 wire [127:0] ciphertext;
 	 wire finished;
-	 wire finished2;
 
 	wire [3:0]state;
-	wire [3:0]state2;
 	 
 	 round round1(.clk(clk), .signal_start(signal_start), .subkey(subkey), .plaintext(plaintext), .ciphertext(ciphertext), .finished(finished), .state_response(state));
-	 round round2(.clk(clk), .signal_start(signal_start2), .subkey(subkey), .plaintext(ciphertext), .ciphertext(plaintext2), .finished(finished2), .state_response(state2));
 	 
 	 initial begin
-			plaintext <= 128'h753778214125442A472D4B6150645367;
 			subkey <= 64'h244226452948404D;
 			signal_start <= 0;
-			signal_start2 <= 0;
 			clk <= 0;
 			#5
 			signal_start <= 1;
 			#10 
 			signal_start <= 0;
 			#100
-			signal_start2 <= 1;
-			#10 
-			signal_start2 <= 0;
-			#1000
 			$stop;
 		end
 		
