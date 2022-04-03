@@ -537,11 +537,11 @@
      borderopacity="1.0"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
+     inkscape:pagecheckerboard="true"
      showgrid="false"
      inkscape:zoom="0.53632813"
      inkscape:cx="1280"
-     inkscape:cy="719.70867"
+     inkscape:cy="719.70866"
      inkscape:window-width="1920"
      inkscape:window-height="1043"
      inkscape:window-x="0"
@@ -555,10 +555,7 @@
        id="g10" /><g
        id="g12"><g
          id="g14"
-         clip-path="url(#clipPath18)"><path
-           d="M 0,0 H 1920 V 1080 H 0 Z"
-           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           id="path20" /><g
+         clip-path="url(#clipPath18)"><g
            id="g22"
            transform="matrix(1,0,0,-1,664.1023,286.7958)"><path
              d="m 0,0 h 172.6562 2"
