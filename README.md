@@ -14,20 +14,22 @@ The verilog implementation follows this scheme and is subdivided into three veri
 ### Round function
 
 The round function is implemented as a state machine. 
-In the first state, the plaintext is subdivided into two 64-bit blocks. 
-In the next state, a bitwise + operation between p0 and p1 is calculated followed by a xor with subkey k0 on p1 
-and a left shift operation of p0. In the last step an XOR operation between p0 and p1 is executed and 
-a finished signal indicates that the round was executed. All states are triggered by an input clock.
+In the following figure the different states of the SPECK verilog implementation can be seen.
 
-```verilog
-module round(
-		input clk,
-		input signal_start,
-		input [64:0] subkey,
-		input [127:0] plaintext,
-		output reg[127:0] ciphertext,
-		output reg finished,
-		output [3:0]state_response
-    );
-```
+![Structure](documentation/figures/round_function_module.png)
 
+#### State:
+
+- 0000: Wait for start signal to start the round function 
+- 0001: Assign p0 and p1 to dedicated registers
+- 0010: Calculate right shift (>> 8) on p1
+- 0011: Calculate p0 + p1
+- 0100: Calculate left shift (<< 3) on p0 and p1 XOR subkey k0
+- 0101: Calculate p0 = p0 + p1
+- 0110: Assign result to ciphertext wire and inidicate round finished by setting finished to 1
+
+
+
+### Key schedule
+
+The key schedule is used 
