@@ -4,14 +4,18 @@ This repository contains a sample implementation of the SPECK64/128 cipher.
 See [Reference](https://csrc.nist.gov/csrc/media/events/lightweight-cryptography-workshop-2015/documents/papers/session1-shors-paper.pdf).
 
 The cipher is using only ARX (Addition, Rotation and XOR) operations, which can be implemented fast in hardware as well as fast in hardware. 
-The cipher can be implemented using two repeated blocks, the key schedule as well as the round function.
+The cipher can be implemented using two repeating blocks, the key schedule as well as the round function.
 Like visualized in the figure below.
 
 ![Structure](documentation/figures/SPECKStructure.svg)
 
-The verilog implementation follows this scheme and is subdivided into three verilog modules. 
+The verilog implementation follows this scheme and is subdivided into three verilog modules.
 
-### Round function
+### 1. Round function
+
+![Structure](documentation/figures/round_function.svg)
+
+
 
 The round function is implemented as a state machine. 
 In the following figure the different states of the SPECK verilog implementation can be seen.
@@ -58,4 +62,4 @@ It sets the signal_start signals and waits for a round function or key schedule 
 The simulation above shows the execution of three rounds of the SPECK cipher. 
 The start_states wire shows the timing when each of the round functions is started. 
 Index 0 is assigned to round 1, 1 to round 2 and so on. 
-After executing the three rounds. The finish signal is set to high the new ciphertext assigned. 
+After executing the three rounds. The finish signal is set to high and the new ciphertext is assigned. 
