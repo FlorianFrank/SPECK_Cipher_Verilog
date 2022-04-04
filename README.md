@@ -13,7 +13,7 @@ The verilog implementation follows this scheme and is subdivided into three veri
 
 ### 1. Round function
 
-<p style="text-align:center;">
+<p align="center">
 <img src="documentation/figures/round_function.svg" width=400/>
 </p>
 
@@ -36,7 +36,7 @@ In the following figure the different states of the SPECK verilog implementation
 
 ### Key schedule
 
-<p style="text-align:center;">
+<p align="center">
 <img src="documentation/figures/Key_schedule.svg" width=400/>
 </p>
 
