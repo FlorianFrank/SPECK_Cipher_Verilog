@@ -36,6 +36,10 @@ In the following figure the different states of the SPECK verilog implementation
 
 ### Key schedule
 
+<p style="text-align:center;">
+<img src="documentation/figures/Key_schedule.svg" width=400/>
+</p>
+
 The key schedule implementation is also part of a dedicated verilog module. 
 It is implemented as state machine similar to the round function. 
 
