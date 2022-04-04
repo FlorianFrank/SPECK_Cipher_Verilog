@@ -13,8 +13,9 @@ The verilog implementation follows this scheme and is subdivided into three veri
 
 ### 1. Round function
 
-<img src="documentation/figures/round_function.svg" width=400></img>
-
+<center>
+<img src="documentation/figures/round_function.svg" width=400/>
+</center>
 
 
 The round function is implemented as a state machine. 
