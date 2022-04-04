@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: University of Passau
+// Engineer: Florian Frank
 // 
 // Create Date:    10:40:15 04/03/2022 
 // Design Name: 
@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
-// Description: 
+// Description: Implementation of the key-schedule module to generate new subkeys k0 and k1.
 //
 // Dependencies: 
 //

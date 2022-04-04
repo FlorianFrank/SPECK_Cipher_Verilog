@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: Univeristy of Passau
+// Engineer: Florian Frank
 // 
 // Create Date:    13:57:07 04/03/2022 
 // Design Name: 
@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
-// Description: 
+// Description: Testbench to test three rounds of the SPECK cipher.
 //
 // Dependencies: 
 //

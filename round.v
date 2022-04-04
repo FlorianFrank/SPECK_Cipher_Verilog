@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: University of Passau
+// Engineer: Florian Frank
 // 
 // Create Date:    18:32:00 04/02/2022 
 // Design Name: 
@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
-// Description: 
+// Description: Implementation of a SPECK round function.
 //
 // Dependencies: 
 //

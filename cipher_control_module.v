@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: University of Passau
+// Engineer: Florian Frank
 // 
 // Create Date:    11:46:05 04/03/2022 
 // Design Name: 
@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
-// Description: 
+// Description: Central control module which executes three rounds of the SPECK cipher.
 //
 // Dependencies: 
 //
