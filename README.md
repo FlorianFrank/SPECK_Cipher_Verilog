@@ -13,10 +13,9 @@ The verilog implementation follows this scheme and is subdivided into three veri
 
 ### 1. Round function
 
-<center>
+<p style="text-align:center;">
 <img src="documentation/figures/round_function.svg" width=400/>
-</center>
-
+</p>
 
 The round function is implemented as a state machine. 
 In the following figure the different states of the SPECK verilog implementation can be seen.
