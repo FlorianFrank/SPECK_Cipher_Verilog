@@ -23,11 +23,11 @@ module key_schedule_encrypt(
 	input wire signal_start,
 	output reg finished,
 	input wire [127:0] key,
+	input wire [63:0] round_ctr,
 	output reg [127:0] outKey,
 	output wire [3:0] state_response
     );
 	 
-	 reg xor_vector = 64'h0; // TODO
 	 
 	 localparam widthshift_k0 = 3;
 	 localparam widthshift_k1 = 8;
@@ -47,7 +47,7 @@ module key_schedule_encrypt(
 	 
 	 localparam shiftwidth_p0 = 8;
 	 localparam shiftwidth_p1 = 3;
-	 
+	 	 
 	 initial begin
 		state <= 0;
 		finished <= 0;
@@ -106,7 +106,7 @@ module key_schedule_encrypt(
 			
 			SHIFT_K0_XOR_P2: begin
 				k1 <= shift_left(k1,3);
-				k0 <= k0 ^ xor_vector;
+				k0 <= k0 ^ round_ctr;
 				inc_state();
 			end
 			

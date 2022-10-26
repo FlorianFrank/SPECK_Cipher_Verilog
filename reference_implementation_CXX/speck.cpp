@@ -28,14 +28,14 @@ int main() {
     uint64_t const key[2] =       {0b0111010100110111011110000010000101000001001001010100010000101010,
                                    0b0100011100101101010010110110000101010000011001000101001101100111};
     encrypt(cyphertext, plaintext, key);
-    printf("Res PlainText: %" PRIu64 " %" PRIu64 "\n", cyphertext[0], cyphertext[1]);
+    printf("Res Ciphertext: %" PRIu64 " %" PRIu64 "\n", cyphertext[0], cyphertext[1]);
     return 0;
 }
 
 void printCurrentState(uint64_t p0, uint64_t p1, uint64_t k0, uint64_t k1)
 {
 #ifdef PRINT_EACH_ROW
-    printf("Row 0 p0: %" PRIu64 " p1: %" PRIu64 " k0: %" PRIu64 "k1: %" PRIu64 "\n", p0, p1, k0, k1);
+    printf("Row 0 p0: %lx p1: %lx k0: %lx k1: %lx\n", p0, p1, k0, k1);
 #endif // PRINT_EACH_ROW
 }
 
