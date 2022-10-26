@@ -28,12 +28,15 @@ module tb_key_schedule(
 	wire [3:0]state;
 	wire finished;
 
-	key_schedule key_schedule(.clk(clk), .signal_start(signal_start), .finished(finished), .key(key), .outKey(outKey), .state_response(state));
+	key_schedule_encrypt key_schedule(.clk(clk), .signal_start(signal_start), .finished(finished), .key(key), .outKey(outKey), .state_response(state));
+	//key_schedule_decrypt key_schedule(.clk(clk), .signal_start(signal_start), .finished(finished), .key(key), .outKey(outKey), .state_response(state));
+	
 	
 	initial begin
 		clk <= 0;
 		signal_start <= 0;
-		key <= 128'h753778214125442A472D4B6150645367;
+		//key <= 128'h1111111111111119bababababababab2;
+		key <= 128'habababababababababababababababab;
 		#10
 		signal_start <= 1;
 		#10
