@@ -4,7 +4,9 @@
  */
 
 #include <cinttypes> // PRIu64
-#include <iostream>
+#include <cstdio> // printf
+
+#define PRINT_EACH_ROW 1
 
 // Rotate right
 #define ROR(x, r) ((x >> r) | (x << (64 - r)))
@@ -14,7 +16,7 @@
 #define R(x, y, k) (x = ROR(x, 8), x += y, x ^= k, y = ROL(y, 3), y ^= x)
 
 #define ROUNDS 32
-void encrypt(uint64_t ct[2], uint64_t const pt[2], uint64_t const K[2]);
+void encrypt(uint64_t cyptherText[2], uint64_t const plainText[2], uint64_t const K[2]);
 
 
 int main() {
@@ -26,20 +28,29 @@ int main() {
     uint64_t const key[2] = {0111010100110111011110000010000101000001001001010100010000101010,
                              0100011100101101010010110110000101010000011001000101001101100111};
     encrypt(cyphertext, plaintext, key);
-    printf("%" PRIu64 "\n", cyphertext[0]);
-    printf("%" PRIu64 "\n", cyphertext[1]);
+    printf("Res PlainText: %" PRIu64 " %" PRIu64 "\n", cyphertext[0], cyphertext[1]);
     return 0;
 }
 
-void encrypt(uint64_t cyptherText[2], uint64_t const plainText[2], uint64_t const key[2]) {
-   uint64_t p0 = plainText[0], p1 = plainText[1], k0 = key[0], k1 = key[1];
+void printCurrentState(uint64_t p0, uint64_t p1, uint64_t k0, uint64_t k1)
+{
+#ifdef PRINT_EACH_ROW
+    printf("Row 0 p0: %" PRIu64 " p1: %" PRIu64 " k0: %" PRIu64 "k1: %" PRIu64 "\n", p0, p1, k0, k1);
+#endif // PRINT_EACH_ROW
+}
 
-   R(p1, p0, k0);
+void encrypt(uint64_t cyptherText[2], uint64_t const plainText[2], uint64_t const key[2])
+{
+    uint64_t p0 = plainText[0], p1 = plainText[1], k0 = key[0], k1 = key[1];
 
-   for (int i = 0; i < ROUNDS - 1; i++) {
-      R(k1, k0, i);
-      R(p1, p0, k0);
-   }
+    R(p1, p0, k0);
+    printCurrentState(p0, p1, k0, k1);
+    for (int round_ctr = 0; round_ctr < ROUNDS - 1; round_ctr++)
+    {
+        R(k1, k0, round_ctr);
+        R(p1, p0, k0);
+        printCurrentState(p0, p1, k0, k1);
+    }
 
     cyptherText[0] = p0;
     cyptherText[1] = p1;
