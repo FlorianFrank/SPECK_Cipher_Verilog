@@ -27,7 +27,7 @@ module key_schedule_decrypt(
 	output reg [127:0] outKey,
 	output wire [3:0] state_response
     );
-	 	 
+
 	 localparam shiftwidth_p0 = 3;
 	 localparam shiftwidth_p1 = 8;
 	 
