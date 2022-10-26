@@ -30,9 +30,7 @@ module round_encrypt(
 	 
 	 localparam shiftwidth_p0 = 8;
 	 localparam shiftwidth_p1 = 3;
-	 
-	 
-	 
+
 	 /** Different states of the state machine. **/
 	 localparam maxState = 6;
 	
@@ -56,7 +54,7 @@ module round_encrypt(
 			else
 				state = 0;
 		end
-	 endtask;
+	 endtask
 	 
 	 function automatic [63:0] shift_right;
 		 input [63:0] in;
@@ -64,7 +62,7 @@ module round_encrypt(
 		 begin
 			shift_right = (in >>> shiftwidth) | (in <<< (64 - shiftwidth));
 		 end
-	 endfunction;
+	 endfunction
 	 
 	 function automatic [63:0] shift_left;
 		 input [63:0] in;
