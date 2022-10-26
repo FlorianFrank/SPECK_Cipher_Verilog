@@ -34,7 +34,7 @@ module tb_speck_cipher(
 	 wire [4:0]state;
 	 
 	 
-	cipher_control_module speck_cipher(.clk(clk), .key(key), .plaintext(plaintext), .ciphertext(ciphertext), .start(start), .finished(finished), .state_response(state));	
+	cipher_control_module_encrypt speck_cipher(.clk(clk), .key(key), .plaintext(plaintext), .ciphertext(ciphertext), .start(start), .finished(finished), .state_response(state));	
 	
 	initial begin
 		start <= 1;

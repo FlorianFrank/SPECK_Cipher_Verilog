@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module cipher_control_module(
+module cipher_control_module_encrypt(
 		input wire clk,
 		input [127:0]key,
 		input [127:0]plaintext,
@@ -44,13 +44,13 @@ module cipher_control_module(
 	
 	
 
-	 round round1(.clk(clk), .signal_start(signal_start_round[0]), .subkey(key[127:64]), .plaintext(plaintext), .ciphertext(ciphertext_ret), .finished(finished_round[0]));
-	 key_schedule key_schedule1(.clk(clk), .signal_start(signal_start_key_schedule[0]), .finished(finished_key_schedule[0]), .key(key), .outKey(outKey));
+	 round_encrypt round1(.clk(clk), .signal_start(signal_start_round[0]), .subkey(key[127:64]), .plaintext(plaintext), .ciphertext(ciphertext_ret), .finished(finished_round[0]));
+	 key_schedule_encrypt key_schedule1(.clk(clk), .signal_start(signal_start_key_schedule[0]), .finished(finished_key_schedule[0]), .key(key), .outKey(outKey));
 	 
-	 round round2(.clk(clk), .signal_start(signal_start_round[1]), .subkey(outKey[127:64]), .plaintext(ciphertext_ret), .ciphertext(ciphertext_ret2), .finished(finished_round[1]));
-	 key_schedule key_schedule2(.clk(clk), .signal_start(signal_start_key_schedule[1]), .finished(finished_key_schedule[1]), .key(key), .outKey(outKey2));
+	 round_encrypt round2(.clk(clk), .signal_start(signal_start_round[1]), .subkey(outKey[127:64]), .plaintext(ciphertext_ret), .ciphertext(ciphertext_ret2), .finished(finished_round[1]));
+	 key_schedule_encrypt key_schedule2(.clk(clk), .signal_start(signal_start_key_schedule[1]), .finished(finished_key_schedule[1]), .key(key), .outKey(outKey2));
 	 
-	 round round3(.clk(clk), .signal_start(signal_start_round[2]), .subkey(outKey2[127:64]), .plaintext(ciphertext_ret2), .ciphertext(ciphertext_ret3), .finished(finished_round[2]));
+	 round_encrypt round3(.clk(clk), .signal_start(signal_start_round[2]), .subkey(outKey2[127:64]), .plaintext(ciphertext_ret2), .ciphertext(ciphertext_ret3), .finished(finished_round[2]));
 	 
 	 localparam maxNrStates = 11;
 	 parameter IDLE = 0;

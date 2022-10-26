@@ -18,25 +18,38 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Test_bench(
-    );
+module testbench();
 
-	 function automatic [63:0] shift_right;
-		 input [63:0] in;
-		 input integer shiftwidth;
-		 begin
-			shift_right = (in >>> shiftwidth) | (in <<< (64 - shiftwidth));
-		 end
-	 endfunction;
+genvar i;
+integer init_val = 0;
+wire[31:0] out_reg[9:0];
+reg[9:0] trigger = 0;
+reg clk = 0;
 
-integer value = 32'h00FFFFFFFFFF;
+generate 
+	for (i = 0; i < 10; i = i + 1) begin: gen_loop
+		if(i == 0)
+			Test t(trigger[0],init_val, out_reg[0]);
+		else begin
+				Test t(trigger[i], out_reg[i-1], out_reg[i]);
+		end
+	end
+endgenerate
 
 initial begin
-#10
-value <= shift_right(value, 8);
-#200
+#100
 $stop;
 end
 
+integer ctr = 0;
+
+always @ (posedge clk) begin
+	trigger[ctr] = 1;
+	ctr = ctr + 1;
+end
+
+initial begin
+	forever #5 clk = ~clk;
+end
 
 endmodule
