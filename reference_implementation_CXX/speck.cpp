@@ -16,7 +16,7 @@
 #define R(x, y, k) (x = ROR(x, 8), x += y, x ^= k, y = ROL(y, 3), y ^= x)
 
 #define ROUNDS 32
-void encrypt(uint64_t cyptherText[2], uint64_t const plainText[2], uint64_t const K[2]);
+void encrypt(uint64_t cipherText[2], uint64_t const plainText[2], uint64_t const K[2]);
 
 
 int main() {
@@ -28,30 +28,34 @@ int main() {
     uint64_t const key[2] =       {0b0111010100110111011110000010000101000001001001010100010000101010,
                                    0b0100011100101101010010110110000101010000011001000101001101100111};
     encrypt(cyphertext, plaintext, key);
-    printf("Res Ciphertext: %" PRIu64 " %" PRIu64 "\n", cyphertext[0], cyphertext[1]);
+    printf("Res Ciphertext:  p0: 0x%lx  p1: 0x%lx\n", cyphertext[0], cyphertext[1]);
     return 0;
 }
 
-void printCurrentState(uint64_t p0, uint64_t p1, uint64_t k0, uint64_t k1)
+void printCurrentState(int iteration, uint64_t p0, uint64_t p1, uint64_t k0, uint64_t k1)
 {
 #ifdef PRINT_EACH_ROW
-    printf("Row 0 p0: %lx p1: %lx k0: %lx k1: %lx\n", p0, p1, k0, k1);
+    printf("Iteration %d p0: 0x%lx p1: 0x%lx k0: 0x%lx k1: 0x%lx\n", iteration, p0, p1, k0, k1);
 #endif // PRINT_EACH_ROW
 }
 
-void encrypt(uint64_t cyptherText[2], uint64_t const plainText[2], uint64_t const key[2])
+void encrypt(uint64_t cipherText[2], uint64_t const plainText[2], uint64_t const key[2])
 {
     uint64_t p0 = plainText[0], p1 = plainText[1], k0 = key[0], k1 = key[1];
 
-    R(p1, p0, k0);
-    printCurrentState(p0, p1, k0, k1);
+    printf("Start ");
+    printCurrentState(0, p0, p1, k0, k1);
+
+
+    R(p0, p1, k1);
+    printCurrentState(0, p0, p1, k0, k1);
     for (int round_ctr = 0; round_ctr < ROUNDS - 1; round_ctr++)
     {
-        R(k1, k0, round_ctr);
-        R(p1, p0, k0);
-        printCurrentState(p0, p1, k0, k1);
+        R(k0, k1, round_ctr);
+        R(p0, p1, k1);
+        printCurrentState(round_ctr, p0, p1, k0, k1);
     }
 
-    cyptherText[0] = p0;
-    cyptherText[1] = p1;
+    cipherText[0] = p0;
+    cipherText[1] = p1;
 }
