@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-10-28T09:23:39</DateModified>
+  <DateModified>2022-10-28T09:39:37</DateModified>
   <ModuleName>test_cipher_n_loops_decrypt</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/project_files/SPECK_Cipher_Verilog/iseconfig/cipher_control_module_encrypt.xreport</SavedFilePath>

@@ -5,11 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="1654" delta="unknown" >"/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/project_files/SPECK_Cipher_Verilog/tb_encrypt_rounds.v" Line 65: Instantiating &lt;<arg fmt="%s" index="1">key_schedule1</arg>&gt; from unknown module &lt;<arg fmt="%s" index="2">key_schedule_encrypt</arg>&gt;
-</msg>
-
-<msg type="error" file="Simulator" num="778" delta="unknown" >Static elaboration of top level Verilog design unit(s) in library <arg fmt="%s" index="1">work</arg> failed
-</msg>
-
 </messages>
 
