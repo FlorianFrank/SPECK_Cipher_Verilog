@@ -43,7 +43,7 @@ module key_schedule(
 	//% Increments the state of the state machine.
 	//% If the maximum number of states is reached reset to 0.
 	 task inc_state; begin
-		if(state < maxNrStates)
+		if(state < `MAX_NR_STATES)
 			state <= state + 1;
 		else
 			state <= 0;
@@ -74,46 +74,46 @@ module key_schedule(
 		case (state)
 
 			// Wait for start signal used for synchronization purposes
-			WAIT_FOR_START: begin
+			`WAIT_FOR_START: begin
 				if(signal_start)
 					inc_state();
 				finished <= 0;
 			end
 
 			// Assign subkeys to variables (for debug purposes, TODO: should later be removed for debug purposes)
-			ASSIGNMENT: begin
+			`ASSIGNMENT: begin
 				k0 <= key[63:0];
 				k1 <= key[127:64];
 				inc_state();
 			end
 
 			// First step of the pipleline shifts k0 to right by `SHIFT_RIGHT_SIZE (typically 8 bit)
-			SHIFT_k1: begin
+			`SHIFT_K1: begin
 				k0 <= shift_right(k0, `SHIFT_RIGHT_SIZE);
 				inc_state();
 			end
 
 			// Execute binary addition of the two subkeys
-			ADD_K0_K1: begin
+			`ADD_K0_K1: begin
 				k0 <= k0 + k1;
 				inc_state();
 			end
 
 			// Left shift operation and XOR with round counter can be executed simultanously
-			SHIFT_K0_XOR_P2: begin
+			`SHIFT_K0_XOR_P2: begin
 				k1 <= shift_left(k1, `SHIFT_LEFT_SIZE);
 				k0 <= k0 ^ round_ctr;
 				inc_state();
 			end
 
 			// Execute XOR operation of the two subkeys
-			XOR_k1_k2: begin
+			`XOR_K1_K2: begin
 				k1 <= k0 ^ k1;
 				inc_state();
 			end
 
 			// Assign results to k0 and k1 (TODO: can be merged with previous state in production code)
-			ASSIGN_RESULTS: begin
+			`ASSIGN_RESULTS: begin
 				outKey[`BLOCK_SIZE-1:0] <= k0;
 				outKey[`KEY_SIZE-1:`BLOCK_SIZE] <= k1;
 				inc_state();
