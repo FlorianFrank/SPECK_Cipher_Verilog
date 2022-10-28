@@ -49,7 +49,7 @@ jobs:
       - name: Install Doxygen
         working-directory: ${{runner.workspace}}/SPECK_Cipher_Verilog/documentation
         shell: bash
-        run: ls -al
+        run: ./install_doxygen_verilog.sh
 
       - name: Build project
         working-directory: ${{runner.workspace}}/SPECK_Cipher_Verilog/documentation
