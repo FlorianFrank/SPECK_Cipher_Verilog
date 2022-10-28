@@ -1,0 +1,3 @@
+verilog work "../../round_encrypt.v"
+verilog work "../../key_schedule.v"
+verilog work "cipher_control_module_decrypt.v"

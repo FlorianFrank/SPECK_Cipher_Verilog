@@ -1,0 +1,29 @@
+Command line:
+   test_cipher_n_loops_encrypt_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  39841
+
+Thu Oct 27 13:52:40 2022
+
+
+ Elaboration Time: 0.03 sec
+
+ Current Memory Usage: 198.803 Meg
+
+ Total Signals          : 339
+ Total Nets             : 11021
+ Total Signal Drivers   : 360
+ Total Blocks           : 258
+ Total Primitive Blocks : 65
+ Total Processes        : 493
+ Total Traceable Variables  : 1056
+ Total Scalar Nets and Variables : 52993
+Total Line Count : 2799
+
+ Total Simulation Time: 0.07 sec
+
+ Current Memory Usage: 274.44 Meg
+
+Thu Oct 27 13:54:01 2022
+

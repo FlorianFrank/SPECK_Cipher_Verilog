@@ -1,0 +1,2 @@
+vhdtdtfi -lib work /home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/round_encrypt.v -lang verilog -prj SPECK_Cipher_Verilog -o round_encrypt.spl -module round_encrypt -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 round_encrypt.spl /home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/round_encrypt.sym 

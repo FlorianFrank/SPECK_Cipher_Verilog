@@ -1,0 +1,78 @@
+ISim log file
+Running: /home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/test_cipher_n_loops_decrypt_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/test_cipher_n_loops_decrypt_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Iteration           0 k0: 0x71a282d971a578ab k1: 0xx48c8d9d3f287e391
+Iteration           1 k0: 0xf43a7c56cbf98908 k1: 0xxb27cb2c95fc69582
+Iteration           2 k0: 0xbb70ed45b6928f09 k1: 0xx28957b0f48a6231c
+Iteration           3 k0: 0x3250ebfc8e5cb5a8 k1: 0xx76fb3386cb6dad49
+Iteration           4 k0: 0x1f2d8472c7fc09fa k1: 0xxa8f418449c9163b1
+Iteration           5 k0: 0xa31345c90f595fbf k1: 0xxe4b387edebd24232
+Iteration           6 k0: 0xa4569b33b4e19b97 k1: 0xx81caa45cea738a00
+Iteration           7 k0: 0x196efaf81e286b9c k1: 0xx173bd81f4db43b98
+Iteration           8 k0: 0xb355471a45d2640b k1: 0xx0a8b87e02873b8cb
+Iteration           9 k0: 0x163edd2742b98b26 k1: 0xx4262e22601244d7e
+Iteration          10 k0: 0x6879210328670703 k1: 0xx7b6e303321456cf1
+Iteration          11 k0: 0x7ed6a954246dd3f3 k1: 0xxa5a728cd2e46b478
+Iteration          12 k0: 0x9925ff76826b2247 k1: 0xxb41cb91ff05e8182
+Iteration          13 k0: 0xfbb5df1f66e0eca9 k1: 0xx5b5017e0e414e0bc
+Iteration          14 k0: 0x054bcdc0037bc1a6 k1: 0xxdfcb72c723dcc444
+Iteration          15 k0: 0x85d0be94e3e0400a k1: 0xx7b8b28adfd06622c
+Iteration          16 k0: 0x8610f96c91ea427c k1: 0xx5a49bc0379d9531f
+Iteration          17 k0: 0xd6cfccfce66b3d70 k1: 0xx04822ce728a1a58a
+Iteration          18 k0: 0x7558fcb4258810d5 k1: 0xx51499b8d60853c85
+Iteration          19 k0: 0x26bef48a14aac486 k1: 0xxacf228e1108320ac
+Iteration          20 k0: 0x3318e7d59a97cb64 k1: 0xx5489a0dd1e8ece01
+Iteration          21 k0: 0xb8bcb9c4f42965d9 k1: 0xx1cf1bf2c005f15d3
+Iteration          22 k0: 0xf6aa7be5c5533f2e k1: 0xx11278285c7ab91b6
+Iteration          23 k0: 0x401e2d01ad70e4e2 k1: 0xxc922392f902c6952
+Iteration          24 k0: 0xab62575c91d9da2e k1: 0xxe2739e2010ba90b8
+Iteration          25 k0: 0x111f00776d4c6a8b k1: 0xx0283f177e898ef4c
+Iteration          26 k0: 0x8d95107860063bac k1: 0xx998a9bc724c141cc
+Iteration          27 k0: 0x461830d79d21481c k1: 0xx8a4ceeeebb2b4678
+Iteration          28 k0: 0xa693071f92c867dc k1: 0xxf4f4706a4b925418
+Iteration          29 k0: 0xd19b03716b251c62 k1: 0xx7638802337b7bca5
+Iteration          30 k0: 0xd90a1b26a922e1df k1: 0xx68ce1a3f149f04f4
+Iteration           0 p0: 72722e8d5e4acf6a p1: xecd5c49bb272dfc4
+Iteration           1 p0: 75b16b8c7671ba30 p1: xd3d4fd42dd870215
+Iteration           2 p0: 78690c68651724cc p1: xb4ccb2d9d57ed704
+Iteration           3 p0: 912ab0a82f243bd8 p1: x1994b7d6360d3e79
+Iteration           4 p0: 886a7f48c05960d7 p1: x3117c0efc32520b4
+Iteration           5 p0: b9d64a4852078f13 p1: x772fb7f4e06f880c
+Iteration           6 p0: c694b0ac701ec861 p1: xf9df3fb7964d00e3
+Iteration           7 p0: cd17a063682823c7 p1: x47e971e37cca7910
+Iteration           8 p0: d048b6ace76717ea p1: xf15fda30029c4b5a
+Iteration           9 p0: 961bed4a7896a3c8 p1: x0422ed939cbf6b96
+Iteration          10 p0: 4b2d7c299334bef0 p1: xd247201b3c85390b
+Iteration          11 p0: b209422dc16d5d74 p1: x732d4b8655f630ff
+Iteration          12 p0: 1c586b2f54f4406b p1: x7824813572936db1
+Iteration          13 p0: 4aaa8537890026cc p1: x4c8f9d4344cce5bb
+Iteration          14 p0: 1e9626571fdd6530 p1: xe0c4a30e99b9986e
+Iteration          15 p0: 52be4fb20e677185 p1: xdfca50ab30cc9fab
+Iteration          16 p0: c6b99205e637fcbb p1: xd1ae83e327d57dc5
+Iteration          17 p0: 06a3a829e6cbd8db p1: xc2e2e23cd83c502f
+Iteration          18 p0: 36e7f36eb6683b1a p1: x98882942a7def11e
+# run all
+Iteration          19 p0: 72e05e15f7b622fd p1: x95cdfb458236d940
+Iteration          20 p0: a8b97cc8432e954c p1: xbce5b4aa0eb01f77
+Iteration          21 p0: 5005e1f85706eb88 p1: x628b990c49b3d147
+Iteration          22 p0: 3c96f9fb9eabea74 p1: xe651cf1e83d6a759
+Iteration          23 p0: 543b082f70284770 p1: xbb58e6dca3afa9a5
+Iteration          24 p0: 052e951feacf9618 p1: xbdec7dde7a70fdda
+Iteration          25 p0: 84b5d9cf05e6b28a p1: x57185d183217ed78
+Iteration          26 p0: cc10f0b279a53dd1 p1: x5a75b09ae6fe2bfe
+Iteration          27 p0: 1f1b2f9edd2dd3c8 p1: xf2cca80513eb62c5
+Iteration          28 p0: d3639e1bb31ab379 p1: xbdbaf0f379d8d621
+Iteration          29 p0: 43fef5d383da5053 p1: x0ddb2ddd19584cab
+Iteration          30 p0: 7170fe9e0d702301 p1: x09c4bb01d350439f
+Stopped at time : 300 us :  in File "/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/test_cipher_n_loops_decrypt.v" Line 33 
+# exit 0

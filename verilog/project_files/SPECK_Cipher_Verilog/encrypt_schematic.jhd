@@ -1,0 +1,11 @@
+MODULE encrypt_schematic
+	SUBMODULE round_encrypt
+		INSTANCE XLXI_1
+	SUBMODULE round_encrypt
+		INSTANCE XLXI_2
+	SUBMODULE round_encrypt
+		INSTANCE XLXI_3
+	SUBMODULE key_schedule_encrypt
+		INSTANCE XLXI_4
+	SUBMODULE key_schedule_encrypt
+		INSTANCE XLXI_5
