@@ -47,12 +47,12 @@ jobs:
 
       
       - name: Install Doxygen
-        working-directory: /home/runner/work/SPECK_Cipher_Verilog/SPECK_Cipher_Verilog/documentation
+        working-directory: ${{runner.workspace}}/SPECK_Cipher_Verilog/documentation
         shell: bash
-        run: ./install_doxygen_verilog.sh
+        run: ls -al
 
       - name: Build project
-        working-directory: /home/runner/work/SPECK_Cipher_Verilog/SPECK_Cipher_Verilog/documentation
+        working-directory: ${{runner.workspace}}/SPECK_Cipher_Verilog/documentation
         shell: bash
         run: ./build_doc.sh
 
@@ -60,4 +60,4 @@ jobs:
         id: deployment
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: /home/runner/work/SPECK_Cipher_Verilog/SPECK_Cipher_Verilog/documentation/build/doxygen_docs/html
+          folder: ${{runner.workspace}}/SPECK_Cipher_Verilog/documentation/build/doxygen_docs/html
