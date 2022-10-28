@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-//% \addtogroup test_bench TestBenches
+//% \addtogroup test_bench Test Benches
 //% @{
 module tb_round_function_encrypt_decrypt(
     );

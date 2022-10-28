@@ -3,7 +3,7 @@
 
 `include "../defines/cipher_settings.vh"
 
-//% \addtogroup test_bench TestBenches
+//% \addtogroup test_bench Test Benches
 //% @brief Contains all test benches indicated by file names starting with tb_*
 //% @{
 module tb_cipher_n_loops_decrypt(

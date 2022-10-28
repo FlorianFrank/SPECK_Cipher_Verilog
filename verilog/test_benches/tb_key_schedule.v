@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-//% \addtogroup test_bench TestBenches
+//% \addtogroup test_bench Test Benches
 //% @brief Contains all test benches indicated by file names starting with tb_*
 //% @{
 module tb_key_schedule(

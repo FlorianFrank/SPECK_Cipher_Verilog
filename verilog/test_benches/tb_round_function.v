@@ -1,8 +1,6 @@
 `timescale 1ns / 1ps
-//% \addtogroup uart UART controller
-//% @brief Contains all modules responsible to establish a UART communication.
+//% \addtogroup test_bench Test Benches
 //% @{
-
 module tb_round_function_encrypt_one_round(
     );
 	 

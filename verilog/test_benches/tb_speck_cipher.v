@@ -1,15 +1,11 @@
 `timescale 1ns / 1ps
 
-//% \addtogroup test_bench TestBenches
+//% \addtogroup test_bench Test Benches
 //% @{
 module tb_speck_cipher(
     );
-	 
-	 //////////////////////////////////////////////////////////////////////////////////
 
-	 
 	 reg [127:0]key = 128'h753778214125442A472D4B6150645367;
-	 //reg [127:0]plaintext = 128'hFF00FF00FF00FF00FF00FF00FF00FF00;
 	 reg [127:0]plaintext = 128'he5b2862a6a7d27f3cf1688b3fbc40c13;
 	 wire [127:0]ciphertext;
 	 reg clk = 0;

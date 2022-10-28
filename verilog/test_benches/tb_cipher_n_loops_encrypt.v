@@ -2,7 +2,7 @@
 
 `include "../defines/cipher_settings.vh"
 
-//% \addtogroup test_bench TestBenches
+//% \addtogroup test_bench Test Benches
 //% @{
 module tb_cipher_n_loops_encrypt(
 	);
