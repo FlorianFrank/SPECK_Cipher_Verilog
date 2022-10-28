@@ -58,7 +58,8 @@
       <Type>func</Type>
     </TokenIdentifier>
     <Path>dc/db0/speck_8cpp.html</Path>
-    <Anchor>af2fa96eecf1024dcd444070923853665</Anchor>
+    <Anchor>a9d5c797149e49dd11569773fc2cbd0c6</Anchor>
+    <Abstract>Encryption function executing ROUNDS of SPECK64/128.</Abstract>
     <DeclaredIn>speck.cpp</DeclaredIn>
   </Token>
   <Token>
@@ -79,6 +80,7 @@
     </TokenIdentifier>
     <Path>dc/db0/speck_8cpp.html</Path>
     <Anchor>a5ceaa0097c92775ad4c32a1de3117b12</Anchor>
+    <Abstract>This function prints out k0, k1, p0 and p1 of a certain iteration.</Abstract>
     <DeclaredIn>speck.cpp</DeclaredIn>
   </Token>
 </Tokens>
