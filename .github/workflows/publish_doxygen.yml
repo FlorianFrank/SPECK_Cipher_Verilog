@@ -43,11 +43,9 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Create Build Environment
-        run: cmake -E make_directory ${{runner.workspace}}/build
 
       - name: Build project
-        working-directory: ${{runner.workspace}}/documentation
+        working-directory: ${{runner.workspace}}/SPECK_Cipher_Verilog/documentation
         shell: bash
         run: ./build_doc.sh
 
@@ -55,4 +53,4 @@ jobs:
         id: deployment
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ${{runner.workspace}}/documentation/build/html
+          folder: ${{runner.workspace}}/SPECK_Cipher_Verilog/documentation/build/html
