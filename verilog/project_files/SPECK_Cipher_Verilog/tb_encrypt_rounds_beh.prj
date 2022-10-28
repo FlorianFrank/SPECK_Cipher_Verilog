@@ -1,0 +1,3 @@
+verilog work "../../modules/round_encrypt.v"
+verilog work "tb_encrypt_rounds.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

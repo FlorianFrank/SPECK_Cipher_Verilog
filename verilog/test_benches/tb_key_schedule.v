@@ -28,7 +28,7 @@ module tb_key_schedule(
 	wire [3:0]state;
 	wire finished;
 
-	key_schedule_encrypt key_schedule(.clk(clk), .signal_start(signal_start), .finished(finished), .key(key), .outKey(outKey), .state_response(state));
+	key_schedule key_schedule(.clk(clk), .signal_start(signal_start), .finished(finished), .key(key), .outKey(outKey), .state_response(state));
 	//key_schedule_decrypt key_schedule(.clk(clk), .signal_start(signal_start), .finished(finished), .key(key), .outKey(outKey), .state_response(state));
 	
 	

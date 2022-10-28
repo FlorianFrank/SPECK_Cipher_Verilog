@@ -1,24 +1,5 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: University of Passau
-// Engineer: Florian Frank
-// 
-// Create Date:    10:40:15 04/03/2022 
-// Design Name: 
-// Module Name:    key_schedule 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: Implementation of the key-schedule module to generate new subkeys k0 and k1.
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
-module key_schedule_encrypt(
+module key_schedule(
 	input wire clk,
 	input wire signal_start,
 	output reg finished,

@@ -1,27 +1,11 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/test_cipher_n_loops_decrypt_isim_beh.exe -prj /home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/test_cipher_n_loops_decrypt_beh.prj work.test_cipher_n_loops_decrypt work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/project_files/SPECK_Cipher_Verilog/tb_encrypt_rounds_isim_beh.exe -prj /home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/project_files/SPECK_Cipher_Verilog/tb_encrypt_rounds_beh.prj work.tb_encrypt_rounds work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Analyzing Verilog file "/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/round_decrypt.v" into library work
-Analyzing Verilog file "/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/../../key_schedule.v" into library work
-Analyzing Verilog file "/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/../../test_cipher_n_loops_decrypt.v" into library work
-WARNING:HDLCompiler:248 - "/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/../../test_cipher_n_loops_decrypt.v" Line 71: Block identifier is required on this block
+Analyzing Verilog file "/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/project_files/SPECK_Cipher_Verilog/../../modules/round_encrypt.v" into library work
+Analyzing Verilog file "/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/project_files/SPECK_Cipher_Verilog/tb_encrypt_rounds.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1007 - "/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/../../test_cipher_n_loops_decrypt.v" Line 110: Element index 128 into subkeys is out of bounds
-WARNING:HDLCompiler:1007 - "/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/../../test_cipher_n_loops_decrypt.v" Line 136: Element index 128 into plaintext is out of bounds
-Completed static elaboration
-Fuse Memory Usage: 83020 KB
-Fuse CPU Usage: 970 ms
-Compiling module key_schedule_encrypt
-Compiling module round_decrypt
-Compiling module test_cipher_n_loops_decrypt
-Compiling module glbl
-Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 4 Verilog Units
-Built simulation executable /home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/test_cipher_n_loops_decrypt_isim_beh.exe
-Fuse Memory Usage: 1167500 KB
-Fuse CPU Usage: 980 ms
-GCC CPU Usage: 380 ms
+ERROR:HDLCompiler:1654 - "/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/project_files/SPECK_Cipher_Verilog/tb_encrypt_rounds.v" Line 65: Instantiating <key_schedule1> from unknown module <key_schedule_encrypt>
+ERROR:Simulator:778 - Static elaboration of top level Verilog design unit(s) in library work failed

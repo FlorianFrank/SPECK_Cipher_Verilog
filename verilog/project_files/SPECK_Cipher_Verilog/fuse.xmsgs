@@ -5,13 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="248" delta="unknown" >"/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/../../test_cipher_n_loops_decrypt.v" Line 71: Block identifier is required on this block
+<msg type="error" file="HDLCompiler" num="1654" delta="unknown" >"/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/project_files/SPECK_Cipher_Verilog/tb_encrypt_rounds.v" Line 65: Instantiating &lt;<arg fmt="%s" index="1">key_schedule1</arg>&gt; from unknown module &lt;<arg fmt="%s" index="2">key_schedule_encrypt</arg>&gt;
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1007" delta="unknown" >"/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/../../test_cipher_n_loops_decrypt.v" Line 110: Element index <arg fmt="%d" index="1">128</arg> into <arg fmt="%s" index="2">subkeys</arg> is out of bounds
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1007" delta="unknown" >"/home/florianfrank/Documents/Research/Projects/PUFMem/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/Project_Files/SPECK_Cipher_Verilog/../../test_cipher_n_loops_decrypt.v" Line 136: Element index <arg fmt="%d" index="1">128</arg> into <arg fmt="%s" index="2">plaintext</arg> is out of bounds
+<msg type="error" file="Simulator" num="778" delta="unknown" >Static elaboration of top level Verilog design unit(s) in library <arg fmt="%s" index="1">work</arg> failed
 </msg>
 
 </messages>
