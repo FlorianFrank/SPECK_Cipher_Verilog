@@ -6,6 +6,6 @@ var speck_8cpp =
     [ "ROR", "dc/db0/speck_8cpp.html#aa567d8f268d03d5a7c41713dfa092d3c", null ],
     [ "ROUNDS", "dc/db0/speck_8cpp.html#a69479655ab94c875413d38689002ff98", null ],
     [ "encrypt", "dc/db0/speck_8cpp.html#a9d5c797149e49dd11569773fc2cbd0c6", null ],
-    [ "main", "dc/db0/speck_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ],
-    [ "printCurrentState", "dc/db0/speck_8cpp.html#a5ceaa0097c92775ad4c32a1de3117b12", null ]
+    [ "main", "dc/db0/speck_8cpp.html#aa365732c82d9660538f29d8db1eddf12", null ],
+    [ "printCurrentState", "dc/db0/speck_8cpp.html#ac6c99900aa7e39653a79597c278d1bc8", null ]
 ];
