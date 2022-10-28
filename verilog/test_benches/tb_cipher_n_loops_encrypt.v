@@ -1,27 +1,9 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    10:48:36 10/26/2022 
-// Design Name: 
-// Module Name:    test 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
 
 `include "../defines/cipher_settings.vh"
 
-
+//% \addtogroup test_bench TestBenches
+//% @{
 module tb_cipher_n_loops_encrypt(
 	);
 	
@@ -129,3 +111,4 @@ genvar i_gen;
 	end
 
 endmodule
+//% @}

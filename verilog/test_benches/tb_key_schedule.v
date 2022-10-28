@@ -1,23 +1,8 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    11:05:19 04/03/2022 
-// Design Name: 
-// Module Name:    tb_key_schedule 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
+//% \addtogroup test_bench TestBenches
+//% @brief Contains all test benches indicated by file names starting with tb_*
+//% @{
 module tb_key_schedule(
     );
 
@@ -50,5 +35,5 @@ module tb_key_schedule(
 		forever #5 clk = ~clk;
 	end
 
-
 endmodule
+//% @}

@@ -1,23 +1,7 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: Univeristy of Passau
-// Engineer: Florian Frank
-// 
-// Create Date:    13:57:07 04/03/2022 
-// Design Name: 
-// Module Name:    tb_speck_cipher 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: Testbench to test three rounds of the SPECK cipher.
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
+//% \addtogroup test_bench TestBenches
+//% @{
 module tb_speck_cipher(
     );
 	 
@@ -47,7 +31,6 @@ module tb_speck_cipher(
 	initial begin 
 		forever #5 clk = ~clk;
 	 end
-	 
-	
 
 endmodule
+// @}

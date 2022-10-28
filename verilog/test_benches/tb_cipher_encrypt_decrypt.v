@@ -1,5 +1,7 @@
 `timescale 1ns / 1ps
 
+//% \addtogroup test_bench TestBenches
+//% @{
 module tb_round_function_encrypt_decrypt(
     );
 	 
@@ -44,5 +46,5 @@ module tb_round_function_encrypt_decrypt(
 		initial begin
 				forever #5 clk <= ~clk;
 		end
-		
 endmodule
+//% @}
