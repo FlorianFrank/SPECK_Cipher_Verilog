@@ -1,77 +1,52 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: University of Passau
-// Engineer: Florian Frank
-// 
-// Create Date:    18:32:00 04/02/2022 
-// Design Name: 
-// Module Name:    round 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: Implementation of a SPECK round function.
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
+`include "../defines/cipher_settings.vh"
+`include "../defines/round_function_defines.vh"
+
+//% \addtogroup round_function Round Function
+//% @brief Round functions executing the encryption of plaintext or decryption of ciphertext.
+//% @{
 module round_encrypt(
+		//% Input clock running the state machine
 		input clk,
+
+		//% Subkey k1 which is XOR'ed with pt0
+		input [`BLOCK_SIZE-1:0] subkey,
+		//% The plaintext to encrypt. TODO: Check this should be block size!
+		input [`KEY_SIZE-1:0] plaintext,
+		//% The resulting ciphertext after exexting this module
+		output reg[`KEY_SIZE-1:0] ciphertext,
+
+		//% Toggle the signal to 1 to start the round encrypt execution. (Must be reset until the cipher finishes)
 		input signal_start,
-		input [63:0] subkey,
-		input [127:0] plaintext,
-		output reg[127:0] ciphertext,
+		//% Toggle high signal when the execution is finished and the resulting plaintext are can be read.
 		output reg finished,
+
+		//% State only for debug purposes, don't need to be connected
 		output [3:0]state_response
     );
 	 
-	 localparam shiftwidth_p0 = 8;
-	 localparam shiftwidth_p1 = 3;
+	 `include "general_functions.v"
 
-	 /** Different states of the state machine. **/
-	 localparam maxState = 6;
-	
-	parameter WAIT_FOR_START = 0;
-	 parameter ASSIGNMENT = 1;
-	 parameter SHIFT = 2;
-	 parameter ADDITION = 3;
-	 parameter XOR_SUBKEY_SHIFT_P0 = 4;
-	 parameter XOR_P0_P1 = 5;
-	 parameter RESULT_ASSIGNMENT = 6;
-	 
-	 reg [4:0] state = 0;
-	 
-	 reg [63:0] p0;
-	 reg [63:0] p1;
-	 
-	 task inc_counter;
+	//% Counter of the state machine
+	reg [4:0] state = 0;
+
+	//% First plaintext block
+	reg [`BLOCK_SIZE-1:0] p0;
+	//% Second plaintext block
+	reg [`BLOCK_SIZE-1:0] p1;
+
+	//% Increments the state of the state machine.
+	//% If the maximum number of states is reached reset to 0.
+	task inc_counter;
 		begin
-			if(state < maxState)
+			if(state < `MAX_STATE)
 				state = state + 1;
 			else
 				state = 0;
 		end
 	 endtask
-	 
-	 function automatic [63:0] shift_right;
-		 input [63:0] in;
-		 input [4:0] shiftwidth;
-		 begin
-			shift_right = (in >>> shiftwidth) | (in <<< (64 - shiftwidth));
-		 end
-	 endfunction
-	 
-	 function automatic [63:0] shift_left;
-		 input [63:0] in;
-		 input [4:0] shiftwidth;
-		 begin
-			shift_left = (in <<< shiftwidth) | (in >>> (64 - shiftwidth));
-		 end
-	 endfunction;
-	 
+
 	 initial begin
 		state <= 0;
 		finished <= 0;
@@ -79,49 +54,57 @@ module round_encrypt(
 	 
 	 
 	 always @ (posedge clk) begin
-		case(state)
-			WAIT_FOR_START: begin
+
+		 case(state)
+			//% Wait for synchronization signal to start the round function
+			`WAIT_FOR_START_ENCRYPT: begin
 				if(signal_start == 1)
 					inc_counter();
 				finished <= 0;
 			end
-			
-			ASSIGNMENT: begin
-				p0 <= plaintext[63:0];
-				p1 <= plaintext[127:64];
+
+		 	//% Assign the measurment to variables (TODO: during production this should be done in the WAIT_FOR_START phase=
+			`ASSIGNMENT_ENCRYPT: begin
+				p0 <= plaintext[`BLOCK_SIZE-1:0];
+				p1 <= plaintext[`KEY_SIZE-1:`BLOCK_SIZE];
 				inc_counter();
 			end
-			
-			SHIFT: begin
-				p0 <= shift_right(p0,8);
+
+			 //% Shift p0 to the right (typically 8 bit)
+			`SHIFT_ENCRYPT: begin
+				p0 <= shift_right(p0,SHIFT_WIDTH_P0);
 				inc_counter();
 			end
-			
-			ADDITION: begin
+
+		 	//% Calculate binary addition of p0 and p1
+			`ADDITION_ENCRYPT: begin
 				p0 <= p0 + p1;
 				inc_counter();
 			end
-			
-			XOR_SUBKEY_SHIFT_P0: begin
-				p1 <= shift_left(p1,3);
+
+			 //% Calculate XOR with subkey of p0
+			`XOR_SUBKEY_SHIFT_P0_ENCRYPT: begin
+				p1 <= shift_left(p1,SHIFT_WIDTH_P1);
 				p0 <= p0 ^ subkey;
 				inc_counter();
 			end
-			XOR_P0_P1: begin
+
+			 //% Calculate XOR p0 and p1 and assign it to p1
+			`XOR_P0_P1_ENCRYPT: begin
 				p1 <= p0 ^ p1;
 				inc_counter();
 			end
-			RESULT_ASSIGNMENT: begin
-				ciphertext[63:0] <= p0;
-				ciphertext [127:64] <= p1;
+
+		 	//% Assign result to ciphertext varialbe (TODO: during production this should be merged with previous state)
+			`RESULT_ASSIGNMENT_ENCRYPT: begin
+				ciphertext[`BLOCK_SIZE-1:0] <= p0;
+				ciphertext [`KEY_SIZE -1:`BLOCK_SIZE] <= p1;
 				finished <= 1;
 				inc_counter();
 			end
-		endcase;
-		
+		endcase
 	 end
-	 
-
+	// Assign state to state response for debug purposes
 	assign state_response = state;
-
 endmodule
+// @}

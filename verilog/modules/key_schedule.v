@@ -27,6 +27,9 @@ module key_schedule(
 	//% State only for debug purposes, don't need to be connected
 	output wire [3:0] state_response
     );
+	 
+	 `include "general_functions.v"
+
 
 	//% Counter of the state machine
 	 reg [3:0] state;
@@ -49,24 +52,6 @@ module key_schedule(
 			state <= 0;
 	 	end
 	 endtask
-
-	//% Shift right and attach overflowing bits on the left side of the buffer.
-	 function automatic [`BLOCK_SIZE-1:0] shift_right;
-		 input [`BLOCK_SIZE-1:0] in;
-		 input [4:0] shiftwidth;
-		 begin
-			shift_right = (in >>> shiftwidth) | (in <<< (`BLOCK_SIZE-1 - shiftwidth));
-		 end
-	 endfunction
-
-	//% Shift left and attach overflowing bits on the right side of the buffer.
-	 function automatic [`BLOCK_SIZE-1:0] shift_left;
-		 input [`BLOCK_SIZE-1:0] in;
-		 input [4:0] shiftwidth;
-		 begin
-			shift_left = (in <<< shiftwidth) | (in >>> (`BLOCK_SIZE - shiftwidth));
-		 end
-	 endfunction
 	 
 	// State machine implementing the key schedule
 	always @ (posedge clk) begin
