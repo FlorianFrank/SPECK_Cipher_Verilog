@@ -3,35 +3,36 @@
 `include "../defines/cipher_settings.vh"
 `include "../defines/key_schedule_defines.vh"
 
-//% \addtogroup key_schedule TestBenches
-//% @brief
+//% \addtogroup key_schedule Key Schedule
+//% @brief Key schedule algorithm which generates new subkeys k0 and k1 of an input key.
 //% @{
+//% Implementing the key schedule scheme to calculate the subkeys k0 and k1
 module key_schedule(
-	// Input clock running the state machine
+	//% Input clock running the state machine
 	input wire clk,
 
+	//% Key of size KEY_SIZE split in two blocks and assigned to k0 and k1
 	input wire [`KEY_SIZE-1:0] key,
-	// Output key of size KEY_SIZE returned after executing the algorithm
+	//% Output key of size KEY_SIZE returned after executing the algorithm
 	output reg [`KEY_SIZE-1:0] outKey,
 
-	// Key counter which is XORed to k0 in each iteration
+	//% Key counter which is XORed to k0 in each iteration
 	input wire [`BLOCK_SIZE-1:0] round_ctr,
 
-	// Toggle the signal to 1 to start the key schedule execution. (Must be reset until the cipher finishes)
+	//% Toggle the signal to 1 to start the key schedule execution. (Must be reset until the cipher finishes)
 	input wire signal_start,
-	// Toggle high signal when the execution is finished and the subkeys are can be read.
+	//% Toggle high signal when the execution is finished and the subkeys are can be read.
 	output reg finished,
-	// Key of size KEY_SIZE split in two blocks and assigned to k0 and k1
 
-	// State only for debug purposes, don't need to be connected
+	//% State only for debug purposes, don't need to be connected
 	output wire [3:0] state_response
     );
 
-	// Counter of the state machine
+	//% Counter of the state machine
 	 reg [3:0] state;
-	// First block of the subkey
+	//% First block of the subkey
 	reg [`BLOCK_SIZE-1:0] k0;
-	// Second block of the subkey
+	//% Second block of the subkey
 	reg [`BLOCK_SIZE-1:0] k1;
 
 	 initial begin
@@ -39,8 +40,8 @@ module key_schedule(
 		finished <= 0;
 	 end
 
-	// Increments the state of the state machine.
-	// If the maximum number of states is reached reset to 0.
+	//% Increments the state of the state machine.
+	//% If the maximum number of states is reached reset to 0.
 	 task inc_state; begin
 		if(state < maxNrStates)
 			state <= state + 1;
@@ -49,7 +50,7 @@ module key_schedule(
 	 	end
 	 endtask
 
-	// Shift right and attach overflowing bits on the left side of the buffer.
+	//% Shift right and attach overflowing bits on the left side of the buffer.
 	 function automatic [`BLOCK_SIZE-1:0] shift_right;
 		 input [`BLOCK_SIZE-1:0] in;
 		 input [4:0] shiftwidth;
@@ -58,7 +59,7 @@ module key_schedule(
 		 end
 	 endfunction
 
-	// Shift left and attach overflowing bits on the right side of the buffer.
+	//% Shift left and attach overflowing bits on the right side of the buffer.
 	 function automatic [`BLOCK_SIZE-1:0] shift_left;
 		 input [`BLOCK_SIZE-1:0] in;
 		 input [4:0] shiftwidth;
