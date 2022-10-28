@@ -99,7 +99,7 @@ WARN_LOGFILE           =
 #---------------------------------------------------------------------------
 # Configuration options related to the input files
 #---------------------------------------------------------------------------
-INPUT                  = ../README.md ../../verilog/modules/ ../../verilog/test_benches/ ../../reference_implementation_cxx
+INPUT                  = ../README.md ../../verilog/modules/ ../../verilog/test_benches/ ../../reference_implementation_cxx ../figures
                          
                          vhdlparser
 INPUT_ENCODING         = UTF-8
