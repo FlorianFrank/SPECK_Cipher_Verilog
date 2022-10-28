@@ -1,27 +1,11 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    10:48:36 10/26/2022 
-// Design Name: 
-// Module Name:    test 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
 
 `include "../defines/cipher_settings.vh"
 
-
+//% \addtogroup test_bench Test Benches
+//% @brief Contains all test benches indicated by file names starting with tb_*
+//% @{
 module tb_cipher_n_loops_decrypt(
 	);
 	
@@ -37,28 +21,25 @@ initial begin
 	forever #1 clk = ~clk;
 end
 
-
-
-//reg [127:0]ciphertext  = 128'b11001111000101101000100010110011111110111100010000001100000100110100011100101101010010110110000101010000011001000101001101100111;
-reg [127:0]ciphertext  = 128'b01011001001010000000100000101000101110001101100011010000010000000011111110000110001011001111010100101011010011100010111001100111;
-reg [127:0]key= 128'b01000111001011010100101101100001010100000110010001010011011001110111010100110111011110000010000101000001001001010100010000101010;
+reg [`KEY_SIZE-1:0]ciphertext  = 128'b01011001001010000000100000101000101110001101100011010000010000000011111110000110001011001111010100101011010011100010111001100111;
+reg [`KEY_SIZE-1:0]key= 128'b01000111001011010100101101100001010100000110010001010011011001110111010100110111011110000010000101000001001001010100010000101010;
 
 reg [`NR_ROUNDS-1:0] signal_start_ks = 0;
 wire [`NR_ROUNDS-1:0] signal_finished_ks;
 reg [`NR_ROUNDS-1:0] signal_start_rd = 0;
 wire [`NR_ROUNDS-1:0] signal_finished_rd;
 
-wire [127:0] subkeys[`NR_ROUNDS-1:0];
-wire [127:0] plaintext[`NR_ROUNDS-1:0];
+wire [`KEY_SIZE-1:0] subkeys[`NR_ROUNDS-1:0];
+wire [`KEY_SIZE-1:0] plaintext[`NR_ROUNDS-1:0];
 integer current_ctr = 0;
 
 wire [3:0] key_schedule_state [`NR_ROUNDS-1:0];
 wire [3:0] round_schedule_state [`NR_ROUNDS-1:0];
 
-reg[63:0] round_ctr [`NR_ROUNDS-1:0];
+reg[`BLOCK_SIZE-1:0] round_ctr [`NR_ROUNDS-1:0];
 
 
-reg[63:0] i;
+reg[`BLOCK_SIZE-1:0] i;
 initial begin
 	for (i = 0; i <= `NR_ROUNDS; i = i + 1) begin
 		round_ctr[i] = i;
@@ -107,7 +88,7 @@ genvar i_gen;
 				if(signal_finished_ks[current_ctr] == 1) begin
 					state = state + 1;
 					$display("Iteration %d k0: 0x%x k1: 0x%x", current_ctr, 
-					subkeys[current_ctr][63:0], subkeys[current_ctr][128:64]);
+					subkeys[current_ctr][`BLOCK_SIZE-1:0], subkeys[current_ctr][`KEY_SIZE:`BLOCK_SIZE]);
 				end
 			end
 			CACHE_ROUND_KEYS: begin
@@ -133,7 +114,7 @@ genvar i_gen;
 			ITERATE_CTR: begin
 				if(current_ctr < `NR_ROUNDS) begin
 					$display("Iteration %d p0: %x p1: %x", current_ctr, 
-					plaintext[current_ctr][63:0], plaintext[current_ctr][128:64]);
+					plaintext[current_ctr][`BLOCK_SIZE-1:0], plaintext[current_ctr][`KEY_SIZE-1:`BLOCK_SIZE]);
 					current_ctr = current_ctr + 1;
 					state = START_ROUND;
 				end
@@ -143,3 +124,4 @@ genvar i_gen;
 	end
 
 endmodule
+//% @}

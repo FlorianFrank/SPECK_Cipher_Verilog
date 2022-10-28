@@ -1,23 +1,8 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    10:30:37 10/26/2022 
-// Design Name: 
-// Module Name:    tb_encrypt_rounds 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
+//% \addtogroup test_bench Test Benches
+//% @brief Contains all test benches indicated by file names starting with tb_*
+//% @{
 module tb_encrypt_rounds(
     );
 	 
@@ -182,5 +167,5 @@ end
 		endcase;
 	 end
 
-
 endmodule
+// @}

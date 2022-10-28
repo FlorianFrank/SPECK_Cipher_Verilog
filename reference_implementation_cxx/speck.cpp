@@ -34,6 +34,14 @@ int main() {
     return 0;
 }
 
+/**
+ * @brief This function prints out k0, k1, p0 and p1 of a certain iteration.
+ * @param iteration current iteration to print out.
+ * @param p0 first plain text block.
+ * @param p1 second plain text block.
+ * @param k0 first key block.
+ * @param k1 second key block.
+ */
 void printCurrentState(int iteration, uint64_t p0, uint64_t p1, uint64_t k0, uint64_t k1)
 {
 #ifdef PRINT_EACH_ROW
@@ -41,6 +49,12 @@ void printCurrentState(int iteration, uint64_t p0, uint64_t p1, uint64_t k0, uin
 #endif // PRINT_EACH_ROW
 }
 
+/**
+ * @brief Encryption function executing #ROUNDS of SPECK64/128.
+ * @param cipherText resulting cipher text.
+ * @param plainText Input plaintext to encrypt.
+ * @param key 128-bit key to be used for the encryption
+ */
 void encrypt(uint64_t cipherText[2], uint64_t const plainText[2], uint64_t const key[2])
 {
     uint64_t p0 = plainText[0], p1 = plainText[1], k0 = key[0], k1 = key[1];
@@ -51,7 +65,7 @@ void encrypt(uint64_t cipherText[2], uint64_t const plainText[2], uint64_t const
 
     R(p0, p1, k1);
     printCurrentState(0, p0, p1, k0, k1);
-    for (int round_ctr = 0; round_ctr < ROUNDS - 1; round_ctr++)
+    for (int round_ctr = 0; round_ctr < ROUNDS; round_ctr++)
     {
         R(k0, k1, round_ctr);
         R(p0, p1, k1);

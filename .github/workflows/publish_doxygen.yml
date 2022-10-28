@@ -1,0 +1,63 @@
+name: publish_doxygen
+
+on:
+  push:
+    branches:
+      - master
+      - feature/add_doxygen_documentation
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - {
+            name: "Publish Doxygen",
+            os: ubuntu-latest,
+            artifact: "ubuntu_gcc.7z",
+            build_type: "Release",
+            cc: "gcc",
+            cxx: "g++",
+            archiver: "7z a",
+            generators: "Ninja"
+          }
+
+    steps:
+      - name: Install Graphiz
+        run: sudo apt-get install graphviz -y
+        shell: bash
+
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      
+      - name: Checkout Doxygen Verilog
+        uses: actions/checkout@v3
+        with:
+          repository: avelure/doxygen-verilog
+          path: documentation/doxygen-verilog
+
+      
+      - name: Install Doxygen
+        working-directory: ${{runner.workspace}}/SPECK_Cipher_Verilog/documentation
+        shell: bash
+        run: ./install_doxygen_verilog.sh
+
+      - name: Build project
+        working-directory: ${{runner.workspace}}/SPECK_Cipher_Verilog/documentation
+        shell: bash
+        run: ./build_doc.sh
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ${{runner.workspace}}/SPECK_Cipher_Verilog/documentation/build/doxygen_docs/html
