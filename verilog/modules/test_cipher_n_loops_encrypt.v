@@ -19,10 +19,10 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-`include "cipher_settings.vh"
+`include "../Defines/cipher_settings.vh"
 
 
-module test_cipher_n_loops_encrypt(
+module tb_cipher_n_loops_encrypt(
 	);
 	
 reg clk;
