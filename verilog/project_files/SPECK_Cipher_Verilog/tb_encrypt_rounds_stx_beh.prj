@@ -1,3 +1,0 @@
-verilog isim_temp "../../modules/round_encrypt.v"
-verilog isim_temp "tb_encrypt_rounds.v"
-verilog isim_temp "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

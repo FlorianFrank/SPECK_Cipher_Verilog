@@ -1,3 +1,0 @@
-verilog isim_temp "../../round.v"
-verilog isim_temp "../../tb_round_function.v"
-verilog isim_temp "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
