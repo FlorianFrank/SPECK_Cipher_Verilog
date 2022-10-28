@@ -7,7 +7,7 @@ The cipher is using only ARX (Addition, Rotation and XOR) operations, which can 
 The cipher can be implemented using two repeating blocks, the key schedule as well as the round function.
 Like visualized in the figure below.
 
-![Structure](../../../figures/SPECKStructure.svg)
+![Structure](https://raw.githubusercontent.com/FlorianFrank/SPECK_Cipher_Verilog/main/documentation/figures/SPECKStructure.svg)
 
 The verilog implementation follows this scheme and is subdivided into three verilog modules.
 
@@ -20,7 +20,7 @@ The verilog implementation follows this scheme and is subdivided into three veri
 The round function is implemented as a state machine. 
 In the following figure the different states of the SPECK verilog implementation can be seen.
 
-![Structure](../../../figures/round_function_module.png)
+![Structure](https://raw.githubusercontent.com/FlorianFrank/SPECK_Cipher_Verilog/main/documentation/figures/round_function_module.png)
 
 #### State:
 
@@ -43,7 +43,7 @@ In the following figure the different states of the SPECK verilog implementation
 The key schedule implementation is also part of a dedicated verilog module. 
 It is implemented as state machine similar to the round function. 
 
-![Structure](../../../figures/key_schedule_module.png)
+![Structure](https://raw.githubusercontent.com/FlorianFrank/SPECK_Cipher_Verilog/main/documentation/figures/key_schedule_module.png)
 
 #### State:
 
@@ -61,7 +61,7 @@ This module is responsible to control the round function and key schedule module
 to execute three rounds of the SPECK64/128 cipher. 
 It sets the signal_start signals and waits for a round function or key schedule to be finished. 
 
-![Structure](../../../figures/SPECK_3_Rounds.png)
+![Structure](https://raw.githubusercontent.com/FlorianFrank/SPECK_Cipher_Verilog/main/documentation/figures/SPECK_3_Rounds.png)
 
 The simulation above shows the execution of three rounds of the SPECK cipher. 
 The start_states wire shows the timing when each of the round functions is started. 
