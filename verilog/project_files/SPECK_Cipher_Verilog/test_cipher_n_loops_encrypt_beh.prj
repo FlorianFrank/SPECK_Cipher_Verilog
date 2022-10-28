@@ -1,0 +1,4 @@
+verilog work "../../modules/round_encrypt.v"
+verilog work "../../modules/key_schedule.v"
+verilog work "../../modules/test_cipher_n_loops_encrypt.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

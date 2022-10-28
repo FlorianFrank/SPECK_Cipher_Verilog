@@ -1,15 +1,15 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: University of Passau
-// Engineer: Florian Frank
+// Company: 
+// Engineer: 
 // 
-// Create Date:    11:46:05 04/03/2022 
+// Create Date:    10:30:37 10/26/2022 
 // Design Name: 
-// Module Name:    cipher_control_module 
+// Module Name:    tb_encrypt_rounds 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
-// Description: Central control module which executes three rounds of the SPECK cipher.
+// Description: 
 //
 // Dependencies: 
 //
@@ -18,16 +18,26 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module cipher_control_module_encrypt(
-		input wire clk,
-		input [127:0]key,
-		input [127:0]plaintext,
-		output wire [127:0]ciphertext,
-		input start,
-		output reg finished = 0,
-		output [4:0]state_response
+module tb_encrypt_rounds(
     );
 	 
+reg clk;	
+	
+begin initial 
+	clk = 0;
+end
+
+initial begin
+	forever #5 clk = ~clk;
+end
+
+	 reg [127:0]key = 128'h753778214125442A472D4B6150645367;
+	 //reg [127:0]plaintext = 128'hFF00FF00FF00FF00FF00FF00FF00FF00;
+	 reg [127:0]plaintext = 128'he5b2862a6a7d27f3cf1688b3fbc40c13;
+	 wire [127:0]ciphertext;
+	 reg start = 1;
+	 reg finished;
+
 	reg [3:0]signal_start_round;
 	reg [3:0]signal_start_key_schedule;
 	
@@ -42,13 +52,20 @@ module cipher_control_module_encrypt(
 	wire [127:0]ciphertext_ret2;
 	wire [127:0]ciphertext_ret3;
 	
+	integer i;
+	initial begin 
+		for (i = 0; i < 10; i = i + 1) begin
+			$display ("CurrentLoop%d", i);
+		end
+	end
+	
 	
 
 	 round_encrypt round1(.clk(clk), .signal_start(signal_start_round[0]), .subkey(key[127:64]), .plaintext(plaintext), .ciphertext(ciphertext_ret), .finished(finished_round[0]));
-	 key_schedule_encrypt key_schedule1(.clk(clk), .signal_start(signal_start_key_schedule[0]), .finished(finished_key_schedule[0]), .key(key), .outKey(outKey));
+	 key_schedule key_schedule1(.clk(clk), .signal_start(signal_start_key_schedule[0]), .finished(finished_key_schedule[0]), .key(key), .outKey(outKey));
 	 
 	 round_encrypt round2(.clk(clk), .signal_start(signal_start_round[1]), .subkey(outKey[127:64]), .plaintext(ciphertext_ret), .ciphertext(ciphertext_ret2), .finished(finished_round[1]));
-	 key_schedule_encrypt key_schedule2(.clk(clk), .signal_start(signal_start_key_schedule[1]), .finished(finished_key_schedule[1]), .key(key), .outKey(outKey2));
+	 key_schedule key_schedule2(.clk(clk), .signal_start(signal_start_key_schedule[1]), .finished(finished_key_schedule[1]), .key(key), .outKey(outKey2));
 	 
 	 round_encrypt round3(.clk(clk), .signal_start(signal_start_round[2]), .subkey(outKey2[127:64]), .plaintext(ciphertext_ret2), .ciphertext(ciphertext_ret3), .finished(finished_round[2]));
 	 
@@ -165,7 +182,5 @@ module cipher_control_module_encrypt(
 		endcase;
 	 end
 
-	assign ciphertext = ciphertext_ret3;
-	assign state_response = signal_start_round;
 
 endmodule

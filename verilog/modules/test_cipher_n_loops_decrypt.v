@@ -19,10 +19,10 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-`include "cipher_settings.vh"
+`include "../Defines/cipher_settings.vh"
 
 
-module test_cipher_n_loops_decrypt(
+module tb_cipher_n_loops_decrypt(
 	);
 	
 reg clk;
@@ -70,14 +70,14 @@ genvar i_gen;
 	generate 
 		for(i_gen = 0; i_gen < `NR_ROUNDS; i_gen = i_gen + 1) begin
 			if(i_gen == 0) begin 
-				key_schedule_encrypt key_schedule(.clk(clk), .signal_start(signal_start_ks[i_gen]), .finished(signal_finished_ks[i_gen]),
+				key_schedule key_schedule(.clk(clk), .signal_start(signal_start_ks[i_gen]), .finished(signal_finished_ks[i_gen]),
 														 .key(key), .round_ctr(round_ctr[i_gen]), .outKey(subkeys[i_gen]), 
 														 .state_response(key_schedule_state[i_gen]));
 				round_decrypt round (.clk(clk), .signal_start(signal_start_rd[i_gen]), .subkey(subkeys[(`NR_ROUNDS -1) - i_gen][127:64]), .plaintext(plaintext[i_gen]), 
 						.ciphertext(ciphertext), .finished(signal_finished_rd[i_gen]), .state_response(round_schedule_state[i_gen]));
 			end
 			else begin
-			key_schedule_encrypt key_schedule(.clk(clk), .signal_start(signal_start_ks[i_gen]), .finished(signal_finished_ks[i_gen]),
+			key_schedule key_schedule(.clk(clk), .signal_start(signal_start_ks[i_gen]), .finished(signal_finished_ks[i_gen]),
 														 .key(subkeys[i_gen-1]), .round_ctr(round_ctr[i_gen]), .outKey(subkeys[i_gen]), 
 														 .state_response(key_schedule_state[i_gen]));
 														 

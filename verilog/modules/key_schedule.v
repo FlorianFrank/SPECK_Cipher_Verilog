@@ -1,35 +1,17 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: University of Passau
-// Engineer: Florian Frank
-// 
-// Create Date:    10:40:15 04/03/2022 
-// Design Name: 
-// Module Name:    key_schedule 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: Implementation of the key-schedule module to generate new subkeys k0 and k1.
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
-module key_schedule_decrypt(
+module key_schedule(
 	input wire clk,
 	input wire signal_start,
 	output reg finished,
 	input wire [127:0] key,
-	input wire [63:0] round_counter,
+	input wire [63:0] round_ctr,
 	output reg [127:0] outKey,
 	output wire [3:0] state_response
     );
-
-	 localparam shiftwidth_p0 = 3;
-	 localparam shiftwidth_p1 = 8;
+	 
+	 
+	 localparam widthshift_k0 = 3;
+	 localparam widthshift_k1 = 8;
 	 
 	 localparam maxNrStates = 6;
 	 parameter WAIT_FOR_START = 0;
@@ -44,23 +26,9 @@ module key_schedule_decrypt(
 	 reg [63:0] k0;
 	 reg [63:0] k1;
 	 
+	 localparam shiftwidth_p0 = 8;
+	 localparam shiftwidth_p1 = 3;
 	 	 
-	 function automatic [63:0] shift_right_reverse;
-		 input [63:0] in;
-		 input [4:0] shiftwidth;
-		 begin
-			shift_right_reverse = (in <<< shiftwidth) | (in >>> (64 - shiftwidth));
-		 end
-	 endfunction;
-	 
-	 function automatic [63:0] shift_left_reverse;
-		 input [63:0] in;
-		 input [4:0] shiftwidth;
-		 begin
-			shift_left_reverse = (in >>> shiftwidth) | (in <<< (64 - shiftwidth));
-		 end
-	 endfunction;
-	 
 	 initial begin
 		state <= 0;
 		finished <= 0;
@@ -74,6 +42,22 @@ module key_schedule_decrypt(
 			state <= 0;
 	 end
 	 endtask;
+	 
+	 function automatic [63:0] shift_right;
+		 input [63:0] in;
+		 input [4:0] shiftwidth;
+		 begin
+			shift_right = (in >>> shiftwidth) | (in <<< (64 - shiftwidth));
+		 end
+	 endfunction;
+	 
+	 function automatic [63:0] shift_left;
+		 input [63:0] in;
+		 input [4:0] shiftwidth;
+		 begin
+			shift_left = (in <<< shiftwidth) | (in >>> (64 - shiftwidth));
+		 end
+	 endfunction;
 	 
 
 	always @ (posedge clk) begin
@@ -92,23 +76,23 @@ module key_schedule_decrypt(
 			end
 			
 			SHIFT_k1: begin
-				k1 <= k0 ^ k1;
+				k0 <= shift_right(k0, 8);
 				inc_state();
 			end
 			
 			ADD_K0_K1: begin
-				k1 <= shift_left_reverse(k1, 3);
-				k0 <= k0 ^ round_counter;
+				k0 <= k0 + k1;
 				inc_state();
 			end
 			
 			SHIFT_K0_XOR_P2: begin
-				k0 <= k0 - k1;
+				k1 <= shift_left(k1,3);
+				k0 <= k0 ^ round_ctr;
 				inc_state();
 			end
 			
 			XOR_k1_k2: begin
-				k0 <= shift_right_reverse(k0, 8);
+				k1 <= k0 ^ k1;
 				inc_state();
 			end
 			
@@ -124,5 +108,8 @@ module key_schedule_decrypt(
 	end
 	
 	assign state_response = state;
+
+
+
 
 endmodule
