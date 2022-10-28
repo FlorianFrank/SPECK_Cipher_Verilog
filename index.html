@@ -83,13 +83,13 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><p>This repository contains a sample implementation of the SPECK64/128 cipher. See <a href="https://csrc.nist.gov/csrc/media/events/lightweight-cryptography-workshop-2015/documents/papers/session1-shors-paper.pdf">Reference</a>.</p>
 <p>The cipher is using only ARX (Addition, Rotation and XOR) operations, which can be implemented fast in hardware as well as fast in hardware. The cipher can be implemented using two repeating blocks, the key schedule as well as the round function. Like visualized in the figure below.</p>
-<p><object type="image/svg+xml" data="documentation/figures/SPECKStructure.svg" style="pointer-events: none;">Structure</object></p>
+<p><object type="image/svg+xml" data="../../../figures/SPECKStructure.svg" style="pointer-events: none;">Structure</object></p>
 <p>The verilog implementation follows this scheme and is subdivided into three verilog modules.</p>
 <h2><a class="anchor" id="autotoc_md1"></a>
 1. Round function</h2>
-<p><object type="image/svg+xml" data="documentation/figures/round_function.svg" style="pointer-events: none;" width="400/"></object> </p>
+<p><object type="image/svg+xml" data="figures/round_function.svg" style="pointer-events: none;" width="400/"></object> </p>
 <p>The round function is implemented as a state machine. In the following figure the different states of the SPECK verilog implementation can be seen.</p>
-<p><img src="documentation/figures/round_function_module.png" alt="Structure" class="inline"/></p>
+<p><img src="../../../figures/round_function_module.png" alt="Structure" class="inline"/></p>
 <h3><a class="anchor" id="autotoc_md2"></a>
 State:</h3>
 <ul>
@@ -103,9 +103,9 @@ State:</h3>
 </ul>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Key schedule</h2>
-<p><object type="image/svg+xml" data="documentation/figures/Key_schedule.svg" style="pointer-events: none;" width="400/"></object> </p>
+<p><object type="image/svg+xml" data="../../../figures/Key_schedule.svg" style="pointer-events: none;" width="400/"></object> </p>
 <p>The key schedule implementation is also part of a dedicated verilog module. It is implemented as state machine similar to the round function.</p>
-<p><img src="documentation/figures/key_schedule_module.png" alt="Structure" class="inline"/></p>
+<p><img src="../../../figures/key_schedule_module.png" alt="Structure" class="inline"/></p>
 <h3><a class="anchor" id="autotoc_md4"></a>
 State:</h3>
 <ul>
@@ -120,7 +120,7 @@ State:</h3>
 <h2><a class="anchor" id="autotoc_md5"></a>
 Cipher control module</h2>
 <p>This module is responsible to control the round function and key schedule modules to execute three rounds of the SPECK64/128 cipher. It sets the signal_start signals and waits for a round function or key schedule to be finished.</p>
-<p><img src="documentation/figures/SPECK_3_Rounds.png" alt="Structure" class="inline"/></p>
+<p><img src="../../../figures/SPECK_3_Rounds.png" alt="Structure" class="inline"/></p>
 <p>The simulation above shows the execution of three rounds of the SPECK cipher. The start_states wire shows the timing when each of the round functions is started. Index 0 is assigned to round 1, 1 to round 2 and so on. After executing the three rounds. The finish signal is set to high and the new ciphertext is assigned. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
@@ -129,7 +129,7 @@ Cipher control module</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Oct 28 2022 12:34:57 for SPECK&nbsp;Implementation by
+    <li class="footer">Generated on Fri Oct 28 2022 12:42:01 for SPECK&nbsp;Implementation by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
