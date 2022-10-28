@@ -30,11 +30,6 @@ jobs:
           }
 
     steps:
-      - name: Install Doxygen
-        working-directory: ${{runner.workspace}}/SPECK_Cipher_Verilog/documentation
-        shell: bash
-        run: ./install_doxygen_verilog.sh
-
       - name: Install Graphiz
         run: sudo apt-get install graphviz -y
         shell: bash
@@ -43,6 +38,11 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: recursive
+
+      - name: Install Doxygen
+        working-directory: ${{runner.workspace}}/SPECK_Cipher_Verilog/documentation
+        shell: bash
+        run: ./install_doxygen_verilog.sh
 
       - name: Build project
         working-directory: ${{runner.workspace}}/SPECK_Cipher_Verilog/documentation
