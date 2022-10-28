@@ -5,6 +5,8 @@
 
 #include <cinttypes> // PRIu64
 #include <cstdio> // printf
+#include <bitset>
+#include <iostream>
 
 #define PRINT_EACH_ROW 1
 
