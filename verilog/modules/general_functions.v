@@ -1,5 +1,5 @@
-`ifndef _general_functions_
-`define _general_functions_
+//`ifndef _general_functions_
+//`define _general_functions_
 
 `include "../defines/cipher_settings.vh"
 
@@ -20,4 +20,4 @@ function automatic [`BLOCK_SIZE-1:0] shift_left;
         shift_left = (in <<< shiftwidth) | (in >>> (`BLOCK_SIZE - shiftwidth));
     end
 endfunction
-`endif //_general_functions_
+//`endif //_general_functions_

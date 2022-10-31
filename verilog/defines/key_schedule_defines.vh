@@ -1,4 +1,4 @@
-`ifndef _key_schedule_defines_
+//`ifndef _key_schedule_defines_
 `define _key_schedule_defines_
 
 `define SHIFT_RIGHT_SIZE    5'd8
@@ -13,4 +13,4 @@
 `define XOR_K1_K2           5
 `define ASSIGN_RESULTS      6
 
-`endif //_key_schedule_defines_
+//`endif //_key_schedule_defines_
