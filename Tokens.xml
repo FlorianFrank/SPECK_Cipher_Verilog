@@ -256,10 +256,10 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>0èÃ*V</Name>
+      <Name> nÈU</Name>
       <APILanguage>verilog</APILanguage>
     </TokenIdentifier>
-    <Path>d9/dbd/group__0_x8F_xCC_5_v.html</Path>
+    <Path>dc/d5d/group___01_xF0n_xE9_u.html</Path>
     <Abstract>Round functions executing the encryption of plaintext or decryption of ciphertext. //% Assign the measurment to variables (TODO: during production this should be done in the WAIT_FOR_START phase=. </Abstract>
   </Token>
   <Token>
@@ -294,154 +294,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>inc_counter</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>instm</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gab6f5b13a70126e024880c325aebb7b46</Anchor>
-    <DeclaredIn>tb_encrypt_rounds.v</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>clk</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga16731c6e60a345111b85a49979757b73</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>signal_start_encrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaf2e1494aa3d886507d5d0010e44c59d6</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>signal_start_decrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga00a75a0059a2ea52f65b842a240bef88</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>subkey</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga21f82a2b0934ebddd79ebb92e3156090</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>plaintext</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaa9b34d0b8ed8f7ba89c6ca81a7c98dc2</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>plaintext2</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga4b4007e1be04580034563241088989fd</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ciphertext</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga511a73ef14f3d56698e980ca5a46d819</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>finished_encrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga9b02ce757a7736267e8d94f08bededff</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>finished_decrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga4adb77e1c1a5b68474e0ae573fcb42af</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>state_encrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga9f0d33001eda3edca8e4aba7cbfdf8cc</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>state_decrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga18e8bd888ad891fb0fa05c605d348960</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>round_encrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gad66e665605c542346b86c3b9912989ea</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>round_decrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gae6e795810bf6ecab99a3544f2293848e</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>clk</Name>
       <APILanguage>verilog</APILanguage>
       <Type>data</Type>
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga79b0c706cd518763c76ff504427e1a81</Anchor>
+    <Anchor>gaa43ac655439ff29864cddfead601be6d</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -451,7 +310,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga02cf38dd5c939e7e706f3ce925d04479</Anchor>
+    <Anchor>gacc832d00434e7c87408b47a3e5597054</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -461,7 +320,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga5cba12132501313e294da037daeab5df</Anchor>
+    <Anchor>gad1010dba52a5a33ea2c791d2464c2f23</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -471,7 +330,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga564f12ede825da1c520aaf5552f312f0</Anchor>
+    <Anchor>gafb306973ad47e5045b74bc22594aaf7f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -481,7 +340,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga53ac0a3c083e820b6d347e2bb33397f0</Anchor>
+    <Anchor>ga1d7bbb1ec150c294160b0ce81ec680af</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -491,7 +350,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gae5d8b08315fa180fdfe4b2d076473802</Anchor>
+    <Anchor>ga486e7dd8ba77a9e6c2a005bcc96ce9bd</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -501,7 +360,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga34be410e50a1d007c001e01b004ea680</Anchor>
+    <Anchor>gaa1f6a31daab075fab4b001690ab2d46d</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -511,7 +370,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gac230b288dd450d0130638165158c056a</Anchor>
+    <Anchor>ga0c91f6d1a889d26320824b92c517187e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -521,7 +380,7 @@
       <Scope>tb_cipher_n_loops_encrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga9b0329a03d5cc98d930c6d5d1662dfb6</Anchor>
+    <Anchor>gafac09ca6427c8ff29dc71917e268daf4</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -531,7 +390,7 @@
       <Scope>tb_cipher_n_loops_encrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gad126efab2c4aaa7cb8c427c3a4fc54b2</Anchor>
+    <Anchor>ga32bc2ba964254044df56791091d528da</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -541,7 +400,7 @@
       <Scope>tb_cipher_n_loops_encrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga7d46ba5179c645c71216a67a41bdfcf3</Anchor>
+    <Anchor>ga2be666b561ded1c756ada5873d7ebda9</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -551,7 +410,7 @@
       <Scope>tb_cipher_n_loops_encrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga4e5f90d79aede6545c442aabde2d98ad</Anchor>
+    <Anchor>ga2cfdc777b01fbc7354909dfd761ad9d8</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -561,7 +420,7 @@
       <Scope>tb_cipher_n_loops_encrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga008b0a5c1f863cf9b90a3d6cf9ac4018</Anchor>
+    <Anchor>ga6fdecaf750fe4e255e1da29139543405</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -571,7 +430,7 @@
       <Scope>tb_cipher_n_loops_encrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gacd104138c8c908a27b944adff907ff83</Anchor>
+    <Anchor>gadca13edb3e9477f8102a13e2ebbd92ad</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -581,337 +440,7 @@
       <Scope>tb_cipher_n_loops_encrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaafad53fe405dd9cd1b20bfe3e524f409</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>clk</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga8f55a4d99930280df14a31bb3c249eaf</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ciphertext</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gab8bc20bed45871c16439e5117570eab8</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>start</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaf5f5909299c449f3269c2546c24cc4cd</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>finished</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga340cbdeb4f5d45beadee1df05ae17e72</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>signal_start_round</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga7f2d92a37d084ffc04127a0a9f9e2b63</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>signal_start_key_schedule</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gab827087c91609b6f6f7ec6e0050d8dee</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>finished_round</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga0ad6cfe897f8c90bde444c586635feef</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>finished_key_schedule</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga331ba6a5f6605b8e06a44813b6e90f95</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>state</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaa18172badef04eeb4f0ef9738e9a1743</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>outKey</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaca9b3d00748c9cf0548a4b91dd05f232</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>outKey2</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gacd9d3ae32ffacf58faa9f8f477f593fb</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ciphertext_ret</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga7285b5da76ebb7c9bafb688796783c56</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ciphertext_ret2</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga138e20902d3eba94be706973f94d9881</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ciphertext_ret3</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga011a1073a01adeeeb08506fa022a9db7</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>i</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gad4ce6d74f3dd19e56467217c6b6ffbf0</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>i_gen</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga036ea807972792d6611b5f23474316a5</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>key_schedule</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gae02a26f64667b6cd54a160c23f61012f</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>round_encrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga42b798a34be2a44dafbaca30520a973b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>key_schedule</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaf7523ca2b8ff63d2ec05ec6a0e533b08</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>round_encrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gac4ca5084bad0e11475a10f2cf637face</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>maxNrStates</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga93cf12c94b98b27dbc6c0b09551105c6</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>IDLE</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gad86632510fc37d0774d4453cb872f44b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ROUND1</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gae69149e68e87972c73a34dd93b5966a5</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ROUND1_DISABLE_START</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga7fab57cdcf9288c70ce2cc2e83db80fc</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ROUND1_WAIT_FINISHED</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga626a76a26433b3d4a2a7ddf640243b72</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>KEY_SCHEDULE1_DISABLE_START</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga34775789662213e971430b03b7959fea</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>KEY_SCHEDULE1_WAIT_FINISHED</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga2ed0ecb1998371ba546756f0bd8b862d</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ROUND2_DISABLE_START</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gac4e416693cbfb6eea76a21782971d966</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ROUND2_WAIT_FINISHED</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaa62cc61d289c404cf511499ccb326d74</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>KEY_SCHEDULE2_DISABLE_START</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga884d7500efcf0a527e925e24d7a9bf2b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>KEY_SCHEDULE2_WAIT_FINISHED</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga51c8dd40dc24ab1e958957a0e0da0437</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ROUND3_DISABLE_START</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga2d40f263506df19d5c1d38dc0d8bc3f6</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ROUND3_WAIT_FINISHED</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gadc005bf59b1769295dbc359a39e170d2</Anchor>
+    <Anchor>ga02220e6d3676a64bc33472382ed5d8af</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -921,7 +450,7 @@
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga40fb1d0d2bc5cd43419baadcec9f831e</Anchor>
+    <Anchor>ga129182754f270bf6e6937fed6dc3b5f6</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -931,7 +460,7 @@
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gad3f5275d232f16d84e26dbf2af1daf20</Anchor>
+    <Anchor>gaaef469c79deebf64aa708c3325483dec</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -941,7 +470,7 @@
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga257f1364722fa20f94a6b80b723a391f</Anchor>
+    <Anchor>gacf33b4403da0b4ef6535374d9a1ca045</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -951,7 +480,7 @@
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga74b3d8b7018dd02d56866ae491c2d38d</Anchor>
+    <Anchor>ga08f911da761b46d695b225c90efe3b94</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -961,7 +490,7 @@
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga984720682c62641e3f5993c23da47b47</Anchor>
+    <Anchor>gaad92ff7454b49ee906de9aff79c86d1e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -971,17 +500,17 @@
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga0472faaecbb7c43475f9aff7e0413f39</Anchor>
+    <Anchor>gaff1d9c61f4a03ece7290ee9e2fd0349c</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>signal_start_key_schedule</Name>
+      <Name>i_gen</Name>
       <APILanguage>verilog</APILanguage>
       <Type>data</Type>
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga64ba9b17105614a4e84752c07c3e9f13</Anchor>
+    <Anchor>ga5146d91d731fbf5256f726c64b33dee6</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -991,7 +520,7 @@
       <Scope>tb_round_function_encrypt_one_round</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaf4df01abfb6617baeeef8b0dab211c81</Anchor>
+    <Anchor>ga142a26a0e012c828bbdbeb30d11b7151</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1001,7 +530,7 @@
       <Scope>tb_round_function_encrypt_one_round</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga5dcd6a755c2b325c1beb2b668ad203e9</Anchor>
+    <Anchor>ga6b49144c712d37ceccfdbe590edb0da0</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1011,7 +540,7 @@
       <Scope>tb_round_function_encrypt_one_round</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gae99fa4b72cd92cb4461481942e34e775</Anchor>
+    <Anchor>ga4d5f9e512c01587dbb1cec55a4421b5a</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1021,7 +550,7 @@
       <Scope>tb_round_function_encrypt_one_round</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gafc6958cccb6fca92d3ebf28653181f54</Anchor>
+    <Anchor>ga7b9f5a58a98d693bda442d61d402cb62</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1031,7 +560,7 @@
       <Scope>tb_round_function_encrypt_one_round</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gac90a07f574841eaad61e2d4be0fa3ccc</Anchor>
+    <Anchor>ga55af4db98d2f6f10e0ac972b13ab85fd</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1041,7 +570,7 @@
       <Scope>tb_round_function_encrypt_one_round</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gab38a13b33b9e5cd20a50648fceeb1d5a</Anchor>
+    <Anchor>ga81ab4632947bed88f45a38fe66db73ac</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1051,7 +580,7 @@
       <Scope>tb_round_function_encrypt_one_round</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga8c3d8fc0fc9eb0ccc75423385c073683</Anchor>
+    <Anchor>ga6a78e565b94ad72532796b2721380eb5</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1062,86 +591,6 @@
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
     <Anchor>gac44ea425377355381b701317dc53356a</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>key</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga32dbc6950c45236b099f20d2a483c19c</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>plaintext</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga80ae5a5163b4dda81994afd621f2e1ca</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ciphertext</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga5a0a1d40c51cb95c1760981c9cd11a10</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>clk</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga58e7987a2e9fec9155ea9d8147083839</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>start</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gabc1930be2462885c4f700a0cf17c6031</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>finished</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga1f719cb4fbae2ec9a7306570cc4dc03d</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>state</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga4bf038d8005ff699a2d78319fdc29ece</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>cipher_control_module</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gac33b5d947f3f9ae003678128d94fef03</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1933,7 +1382,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga79b0c706cd518763c76ff504427e1a81</Anchor>
+    <Anchor>gaa43ac655439ff29864cddfead601be6d</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1943,7 +1392,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga02cf38dd5c939e7e706f3ce925d04479</Anchor>
+    <Anchor>gacc832d00434e7c87408b47a3e5597054</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1953,7 +1402,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga5cba12132501313e294da037daeab5df</Anchor>
+    <Anchor>gad1010dba52a5a33ea2c791d2464c2f23</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1963,7 +1412,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga564f12ede825da1c520aaf5552f312f0</Anchor>
+    <Anchor>gafb306973ad47e5045b74bc22594aaf7f</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1973,7 +1422,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga53ac0a3c083e820b6d347e2bb33397f0</Anchor>
+    <Anchor>ga1d7bbb1ec150c294160b0ce81ec680af</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1983,7 +1432,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gae5d8b08315fa180fdfe4b2d076473802</Anchor>
+    <Anchor>ga486e7dd8ba77a9e6c2a005bcc96ce9bd</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1993,7 +1442,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga34be410e50a1d007c001e01b004ea680</Anchor>
+    <Anchor>gaa1f6a31daab075fab4b001690ab2d46d</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2003,7 +1452,7 @@
       <Scope>tb_cipher_n_loops_decrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gac230b288dd450d0130638165158c056a</Anchor>
+    <Anchor>ga0c91f6d1a889d26320824b92c517187e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2114,7 +1563,7 @@
       <Scope>tb_cipher_n_loops_encrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga9b0329a03d5cc98d930c6d5d1662dfb6</Anchor>
+    <Anchor>gafac09ca6427c8ff29dc71917e268daf4</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2124,7 +1573,7 @@
       <Scope>tb_cipher_n_loops_encrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gad126efab2c4aaa7cb8c427c3a4fc54b2</Anchor>
+    <Anchor>ga32bc2ba964254044df56791091d528da</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2134,7 +1583,7 @@
       <Scope>tb_cipher_n_loops_encrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga7d46ba5179c645c71216a67a41bdfcf3</Anchor>
+    <Anchor>ga2be666b561ded1c756ada5873d7ebda9</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2144,7 +1593,7 @@
       <Scope>tb_cipher_n_loops_encrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga4e5f90d79aede6545c442aabde2d98ad</Anchor>
+    <Anchor>ga2cfdc777b01fbc7354909dfd761ad9d8</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2154,7 +1603,7 @@
       <Scope>tb_cipher_n_loops_encrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga008b0a5c1f863cf9b90a3d6cf9ac4018</Anchor>
+    <Anchor>ga6fdecaf750fe4e255e1da29139543405</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2164,7 +1613,7 @@
       <Scope>tb_cipher_n_loops_encrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gacd104138c8c908a27b944adff907ff83</Anchor>
+    <Anchor>gadca13edb3e9477f8102a13e2ebbd92ad</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2174,423 +1623,7 @@
       <Scope>tb_cipher_n_loops_encrypt</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaafad53fe405dd9cd1b20bfe3e524f409</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>tb_encrypt_rounds</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>cl</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d6/dbf/enumtb__encrypt__rounds.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>inc_counter</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>instm</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gab6f5b13a70126e024880c325aebb7b46</Anchor>
-    <DeclaredIn>tb_encrypt_rounds.v</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>clk</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga8f55a4d99930280df14a31bb3c249eaf</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ciphertext</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gab8bc20bed45871c16439e5117570eab8</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>start</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaf5f5909299c449f3269c2546c24cc4cd</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>finished</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga340cbdeb4f5d45beadee1df05ae17e72</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>signal_start_round</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga7f2d92a37d084ffc04127a0a9f9e2b63</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>signal_start_key_schedule</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gab827087c91609b6f6f7ec6e0050d8dee</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>finished_round</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga0ad6cfe897f8c90bde444c586635feef</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>finished_key_schedule</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga331ba6a5f6605b8e06a44813b6e90f95</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>state</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaa18172badef04eeb4f0ef9738e9a1743</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>outKey</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaca9b3d00748c9cf0548a4b91dd05f232</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>outKey2</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gacd9d3ae32ffacf58faa9f8f477f593fb</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ciphertext_ret</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga7285b5da76ebb7c9bafb688796783c56</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ciphertext_ret2</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga138e20902d3eba94be706973f94d9881</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ciphertext_ret3</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga011a1073a01adeeeb08506fa022a9db7</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>i</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gad4ce6d74f3dd19e56467217c6b6ffbf0</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>i_gen</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga036ea807972792d6611b5f23474316a5</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>key_schedule</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gae02a26f64667b6cd54a160c23f61012f</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>round_encrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga42b798a34be2a44dafbaca30520a973b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>key_schedule</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaf7523ca2b8ff63d2ec05ec6a0e533b08</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>round_encrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gac4ca5084bad0e11475a10f2cf637face</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>maxNrStates</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga93cf12c94b98b27dbc6c0b09551105c6</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>IDLE</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gad86632510fc37d0774d4453cb872f44b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ROUND1</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gae69149e68e87972c73a34dd93b5966a5</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ROUND1_DISABLE_START</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga7fab57cdcf9288c70ce2cc2e83db80fc</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ROUND1_WAIT_FINISHED</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga626a76a26433b3d4a2a7ddf640243b72</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>KEY_SCHEDULE1_DISABLE_START</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga34775789662213e971430b03b7959fea</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>KEY_SCHEDULE1_WAIT_FINISHED</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga2ed0ecb1998371ba546756f0bd8b862d</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ROUND2_DISABLE_START</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gac4e416693cbfb6eea76a21782971d966</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ROUND2_WAIT_FINISHED</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaa62cc61d289c404cf511499ccb326d74</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>KEY_SCHEDULE2_DISABLE_START</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga884d7500efcf0a527e925e24d7a9bf2b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>KEY_SCHEDULE2_WAIT_FINISHED</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga51c8dd40dc24ab1e958957a0e0da0437</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ROUND3_DISABLE_START</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga2d40f263506df19d5c1d38dc0d8bc3f6</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ROUND3_WAIT_FINISHED</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_encrypt_rounds</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gadc005bf59b1769295dbc359a39e170d2</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>clk</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>key_schedule</Scope>
-    </TokenIdentifier>
-    <Path>df/d7f/group__key__schedule.html</Path>
-    <Anchor>ga92994e2c538be9aeba8bc2c2f6cdacec</Anchor>
-    <Abstract>//% Input clock running the state machine </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>general_functions.v</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>key_schedule</Scope>
-    </TokenIdentifier>
-    <Path>df/d7f/group__key__schedule.html</Path>
-    <Anchor>ga606df58d9ba5241af8841be78298ce23</Anchor>
-    <Abstract>//% Key of size KEY_SIZE split in two blocks and assigned to k0 and k1 </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>state</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>key_schedule</Scope>
-    </TokenIdentifier>
-    <Path>df/d7f/group__key__schedule.html</Path>
-    <Anchor>ga7f85beb879c9a6f3e4da93037ae5e873</Anchor>
-    <Abstract>//% Counter of the state machine </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>clk</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>round_encrypt</Scope>
-    </TokenIdentifier>
-    <Path>d8/d2b/enumround__encrypt.html</Path>
-    <Anchor>a79caf8c5069053385e65b7edc6cbac26</Anchor>
-    <Abstract>//% Input clock running the state machine </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>general_functions.v</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>round_encrypt</Scope>
-    </TokenIdentifier>
-    <Path>d8/d2b/enumround__encrypt.html</Path>
-    <Anchor>ae3b61e81799cc5e3e601376f1ce234a6</Anchor>
-    <Abstract>//% Subkey k1 which is XOR&amp;#39;ed with pt0 </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>state</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>round_encrypt</Scope>
-    </TokenIdentifier>
-    <Path>d8/d2b/enumround__encrypt.html</Path>
-    <Anchor>a0f9dd840448589944b826040701b05e8</Anchor>
-    <Abstract>//% Counter of the state machine </Abstract>
+    <Anchor>ga02220e6d3676a64bc33472382ed5d8af</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2609,7 +1642,7 @@
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga40fb1d0d2bc5cd43419baadcec9f831e</Anchor>
+    <Anchor>ga129182754f270bf6e6937fed6dc3b5f6</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2619,7 +1652,7 @@
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gad3f5275d232f16d84e26dbf2af1daf20</Anchor>
+    <Anchor>gaaef469c79deebf64aa708c3325483dec</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2629,7 +1662,7 @@
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga257f1364722fa20f94a6b80b723a391f</Anchor>
+    <Anchor>gacf33b4403da0b4ef6535374d9a1ca045</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2639,7 +1672,7 @@
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga74b3d8b7018dd02d56866ae491c2d38d</Anchor>
+    <Anchor>ga08f911da761b46d695b225c90efe3b94</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2649,7 +1682,7 @@
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga984720682c62641e3f5993c23da47b47</Anchor>
+    <Anchor>gaad92ff7454b49ee906de9aff79c86d1e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2659,17 +1692,17 @@
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga0472faaecbb7c43475f9aff7e0413f39</Anchor>
+    <Anchor>gaff1d9c61f4a03ece7290ee9e2fd0349c</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>signal_start_key_schedule</Name>
+      <Name>i_gen</Name>
       <APILanguage>verilog</APILanguage>
       <Type>data</Type>
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga64ba9b17105614a4e84752c07c3e9f13</Anchor>
+    <Anchor>ga5146d91d731fbf5256f726c64b33dee6</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -2807,161 +1840,8 @@
       <Type>data</Type>
       <Scope>tb_round_function_encrypt_decrypt</Scope>
     </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gae6e795810bf6ecab99a3544f2293848e</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>clk</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga16731c6e60a345111b85a49979757b73</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>signal_start_encrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaf2e1494aa3d886507d5d0010e44c59d6</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>signal_start_decrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga00a75a0059a2ea52f65b842a240bef88</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>subkey</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga21f82a2b0934ebddd79ebb92e3156090</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>plaintext</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaa9b34d0b8ed8f7ba89c6ca81a7c98dc2</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>plaintext2</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga4b4007e1be04580034563241088989fd</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ciphertext</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga511a73ef14f3d56698e980ca5a46d819</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>finished_encrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga9b02ce757a7736267e8d94f08bededff</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>finished_decrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga4adb77e1c1a5b68474e0ae573fcb42af</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>state_encrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga9f0d33001eda3edca8e4aba7cbfdf8cc</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>state_decrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga18e8bd888ad891fb0fa05c605d348960</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>round_encrypt</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_round_function_encrypt_decrypt</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gad66e665605c542346b86c3b9912989ea</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>clk</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>round_encrypt</Scope>
-    </TokenIdentifier>
-    <Path>d8/d2b/enumround__encrypt.html</Path>
-    <Anchor>a79caf8c5069053385e65b7edc6cbac26</Anchor>
-    <Abstract>//% Input clock running the state machine </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>general_functions.v</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>round_encrypt</Scope>
-    </TokenIdentifier>
-    <Path>d8/d2b/enumround__encrypt.html</Path>
-    <Anchor>ae3b61e81799cc5e3e601376f1ce234a6</Anchor>
-    <Abstract>//% Subkey k1 which is XOR&amp;#39;ed with pt0 </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>state</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>round_encrypt</Scope>
-    </TokenIdentifier>
-    <Path>d8/d2b/enumround__encrypt.html</Path>
-    <Anchor>a0f9dd840448589944b826040701b05e8</Anchor>
-    <Abstract>//% Counter of the state machine </Abstract>
+    <Path>de/d77/enumtb__round__function__encrypt__decrypt.html</Path>
+    <Anchor>ae6e795810bf6ecab99a3544f2293848e</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3002,7 +1882,7 @@
       <Scope>tb_round_function_encrypt_one_round</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gaf4df01abfb6617baeeef8b0dab211c81</Anchor>
+    <Anchor>ga142a26a0e012c828bbdbeb30d11b7151</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3012,7 +1892,7 @@
       <Scope>tb_round_function_encrypt_one_round</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga5dcd6a755c2b325c1beb2b668ad203e9</Anchor>
+    <Anchor>ga6b49144c712d37ceccfdbe590edb0da0</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3022,7 +1902,7 @@
       <Scope>tb_round_function_encrypt_one_round</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gae99fa4b72cd92cb4461481942e34e775</Anchor>
+    <Anchor>ga4d5f9e512c01587dbb1cec55a4421b5a</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3032,7 +1912,7 @@
       <Scope>tb_round_function_encrypt_one_round</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gafc6958cccb6fca92d3ebf28653181f54</Anchor>
+    <Anchor>ga7b9f5a58a98d693bda442d61d402cb62</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3042,7 +1922,7 @@
       <Scope>tb_round_function_encrypt_one_round</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gac90a07f574841eaad61e2d4be0fa3ccc</Anchor>
+    <Anchor>ga55af4db98d2f6f10e0ac972b13ab85fd</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3052,7 +1932,7 @@
       <Scope>tb_round_function_encrypt_one_round</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gab38a13b33b9e5cd20a50648fceeb1d5a</Anchor>
+    <Anchor>ga81ab4632947bed88f45a38fe66db73ac</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3062,7 +1942,7 @@
       <Scope>tb_round_function_encrypt_one_round</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga8c3d8fc0fc9eb0ccc75423385c073683</Anchor>
+    <Anchor>ga6a78e565b94ad72532796b2721380eb5</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -3095,94 +1975,5 @@
     <Path>d9/d37/enumround__decrypt.html</Path>
     <Anchor>aa1ce05b61ee720e9508883911d138226</Anchor>
     <Abstract>//% Subkey k1 which is XOR&amp;#39;ed with pt0 </Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>tb_speck_cipher</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>cl</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>df/d60/enumtb__speck__cipher.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>key</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga32dbc6950c45236b099f20d2a483c19c</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>plaintext</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga80ae5a5163b4dda81994afd621f2e1ca</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>ciphertext</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga5a0a1d40c51cb95c1760981c9cd11a10</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>clk</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga58e7987a2e9fec9155ea9d8147083839</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>start</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gabc1930be2462885c4f700a0cf17c6031</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>finished</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga1f719cb4fbae2ec9a7306570cc4dc03d</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>state</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>ga4bf038d8005ff699a2d78319fdc29ece</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>cipher_control_module</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-      <Scope>tb_speck_cipher</Scope>
-    </TokenIdentifier>
-    <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gac33b5d947f3f9ae003678128d94fef03</Anchor>
   </Token>
 </Tokens>

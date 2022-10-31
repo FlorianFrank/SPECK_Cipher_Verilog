@@ -72,7 +72,7 @@ main();
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Oct 28 2022 17:04:38 for SPECK&nbsp;Implementation by
+    <li class="footer">Generated on Mon Oct 31 2022 07:43:26 for SPECK&nbsp;Implementation by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>

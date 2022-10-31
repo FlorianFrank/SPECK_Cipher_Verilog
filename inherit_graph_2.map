@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d6/daa/enumtb__cipher__n__loops__encrypt.html" title="tb_cipher_n_loops_encrypt" alt="" coords="5,5,200,32"/>
+<area shape="rect" id="node2" href="$dc/d71/enumtb__key__schedule.html" title="tb_key_schedule" alt="" coords="200,5,331,32"/>
+<area shape="rect" id="node3" href="$de/d77/enumtb__round__function__encrypt__decrypt.html" title="tb_round_function_encrypt\l_decrypt" alt="" coords="168,57,363,98"/>
+<area shape="rect" id="node4" href="$d9/d37/enumround__decrypt.html" title="round_decrypt" alt="" coords="5,93,120,120"/>
+<area shape="rect" id="node5" href="$db/d4d/enumtb__round__function__encrypt__one__round.html" title="tb_round_function_encrypt\l_one_round" alt="" coords="168,122,363,163"/>
 </map>

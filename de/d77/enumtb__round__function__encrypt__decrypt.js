@@ -11,18 +11,6 @@ var enumtb__round__function__encrypt__decrypt =
     [ "finished_decrypt", "de/d77/enumtb__round__function__encrypt__decrypt.html#ab2a30c0d81d0feb8c0e278fb1f22ff01", null ],
     [ "state_encrypt", "de/d77/enumtb__round__function__encrypt__decrypt.html#af57d5b01b6a78cab79ec60225c2aecec", null ],
     [ "state_decrypt", "de/d77/enumtb__round__function__encrypt__decrypt.html#a4c13aef02f74e9a3cd71363ce400a029", null ],
-    [ "clk", "d7/d1b/group__test__bench.html#ga16731c6e60a345111b85a49979757b73", null ],
-    [ "signal_start_encrypt", "d7/d1b/group__test__bench.html#gaf2e1494aa3d886507d5d0010e44c59d6", null ],
-    [ "signal_start_decrypt", "d7/d1b/group__test__bench.html#ga00a75a0059a2ea52f65b842a240bef88", null ],
-    [ "subkey", "d7/d1b/group__test__bench.html#ga21f82a2b0934ebddd79ebb92e3156090", null ],
-    [ "plaintext", "d7/d1b/group__test__bench.html#gaa9b34d0b8ed8f7ba89c6ca81a7c98dc2", null ],
-    [ "plaintext2", "d7/d1b/group__test__bench.html#ga4b4007e1be04580034563241088989fd", null ],
-    [ "ciphertext", "d7/d1b/group__test__bench.html#ga511a73ef14f3d56698e980ca5a46d819", null ],
-    [ "finished_encrypt", "d7/d1b/group__test__bench.html#ga9b02ce757a7736267e8d94f08bededff", null ],
-    [ "finished_decrypt", "d7/d1b/group__test__bench.html#ga4adb77e1c1a5b68474e0ae573fcb42af", null ],
-    [ "state_encrypt", "d7/d1b/group__test__bench.html#ga9f0d33001eda3edca8e4aba7cbfdf8cc", null ],
-    [ "state_decrypt", "d7/d1b/group__test__bench.html#ga18e8bd888ad891fb0fa05c605d348960", null ],
     [ "i_gen", "de/d77/enumtb__round__function__encrypt__decrypt.html#afbadd8673506ce13cbb9ddd9ba9f311a", null ],
-    [ "round_decrypt", "d7/d1b/group__test__bench.html#gae6e795810bf6ecab99a3544f2293848e", null ],
-    [ "round_encrypt", "d7/d1b/group__test__bench.html#gad66e665605c542346b86c3b9912989ea", null ]
+    [ "round_decrypt", "de/d77/enumtb__round__function__encrypt__decrypt.html#ae6e795810bf6ecab99a3544f2293848e", null ]
 ];

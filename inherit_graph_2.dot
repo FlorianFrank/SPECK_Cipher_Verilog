@@ -4,5 +4,13 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="tb_cipher_n_loops_encrypt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/daa/enumtb__cipher__n__loops__encrypt.html"];
+  Node12 [label="i_gen",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node12 -> Node13 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="tb_key_schedule",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d71/enumtb__key__schedule.html"];
+  Node12 -> Node1 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="tb_round_function_encrypt\l_decrypt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d77/enumtb__round__function__encrypt__decrypt.html"];
+  Node0 [label="round_decrypt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d37/enumround__decrypt.html"];
+  Node0 -> Node1 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node2 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="tb_round_function_encrypt\l_one_round",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d4d/enumtb__round__function__encrypt__one__round.html"];
 }

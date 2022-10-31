@@ -4,7 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node15 [label="cipher_control_module",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node15 -> Node0 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="tb_speck_cipher",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d60/enumtb__speck__cipher.html"];
+  Node0 [label="tb_cipher_n_loops_decrypt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d0b/enumtb__cipher__n__loops__decrypt.html"];
 }

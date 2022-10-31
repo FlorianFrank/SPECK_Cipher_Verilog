@@ -9,11 +9,11 @@ var enumtb__cipher__n__loops__encrypt =
     [ "START_ROUND", "d6/daa/enumtb__cipher__n__loops__encrypt.html#a33d7efa61f93178d48105823c8bdc9fe", null ],
     [ "STOP_ROUND", "d6/daa/enumtb__cipher__n__loops__encrypt.html#ad34bbc7ba793b2b1d3ad12e4d886e8d1", null ],
     [ "ITERATE_CTR", "d6/daa/enumtb__cipher__n__loops__encrypt.html#a9c0b1eca6e55d298ecb10e5800a96d49", null ],
-    [ "clk", "d7/d1b/group__test__bench.html#ga9b0329a03d5cc98d930c6d5d1662dfb6", null ],
-    [ "plaintext", "d7/d1b/group__test__bench.html#gad126efab2c4aaa7cb8c427c3a4fc54b2", null ],
-    [ "key", "d7/d1b/group__test__bench.html#ga7d46ba5179c645c71216a67a41bdfcf3", null ],
-    [ "STOP_KEY_SCHEDULE", "d7/d1b/group__test__bench.html#ga4e5f90d79aede6545c442aabde2d98ad", null ],
-    [ "START_ROUND", "d7/d1b/group__test__bench.html#ga008b0a5c1f863cf9b90a3d6cf9ac4018", null ],
-    [ "STOP_ROUND", "d7/d1b/group__test__bench.html#gacd104138c8c908a27b944adff907ff83", null ],
-    [ "ITERATE_CTR", "d7/d1b/group__test__bench.html#gaafad53fe405dd9cd1b20bfe3e524f409", null ]
+    [ "clk", "d7/d1b/group__test__bench.html#gafac09ca6427c8ff29dc71917e268daf4", null ],
+    [ "plaintext", "d7/d1b/group__test__bench.html#ga32bc2ba964254044df56791091d528da", null ],
+    [ "key", "d7/d1b/group__test__bench.html#ga2be666b561ded1c756ada5873d7ebda9", null ],
+    [ "STOP_KEY_SCHEDULE", "d7/d1b/group__test__bench.html#ga2cfdc777b01fbc7354909dfd761ad9d8", null ],
+    [ "START_ROUND", "d7/d1b/group__test__bench.html#ga6fdecaf750fe4e255e1da29139543405", null ],
+    [ "STOP_ROUND", "d7/d1b/group__test__bench.html#gadca13edb3e9477f8102a13e2ebbd92ad", null ],
+    [ "ITERATE_CTR", "d7/d1b/group__test__bench.html#ga02220e6d3676a64bc33472382ed5d8af", null ]
 ];
