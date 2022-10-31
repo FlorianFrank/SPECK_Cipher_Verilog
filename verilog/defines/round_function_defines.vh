@@ -2,10 +2,10 @@
 `define _key_schedule_defines_
 
 
-`define MAX_STATE           6
+`define MAX_STATE                   6
 
-`define SHIFT_WIDTH_P0      8
-`define SHIFT_WIDTH_P1      3
+`define SHIFT_WIDTH_P0              8
+`define SHIFT_WIDTH_P1              3
 
 /** ENCRYPTION **/
 `define WAIT_FOR_START_ENCRYPT      0
