@@ -125,16 +125,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>_general_functions_</Name>
-      <APILanguage>verilog</APILanguage>
-      <Type>data</Type>
-    </TokenIdentifier>
-    <Path>db/de4/general__functions_8v.html</Path>
-    <Anchor>a84f8a7bdb56f3fb9c7b9a3949e3b5ab3</Anchor>
-    <DeclaredIn>general_functions.v</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>cipher_settings.vh</Name>
       <APILanguage>verilog</APILanguage>
       <Type>data</Type>
@@ -413,10 +403,10 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>`n∆yU</Name>
+      <Name>@A÷BV</Name>
       <APILanguage>verilog</APILanguage>
     </TokenIdentifier>
-    <Path>d7/dc7/group__`n_xC6y_u.html</Path>
+    <Path>db/d81/group___0D_a_xD6_b_v.html</Path>
     <Abstract>Round functions executing the encryption of plaintext or decryption of ciphertext. //% Assign the measurment to variables (TODO: during production this should be done in the WAIT_FOR_START phase=. </Abstract>
   </Token>
   <Token>
