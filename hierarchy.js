@@ -1,12 +1,14 @@
 var hierarchy =
 [
     [ "i_gen", null, [
-      [ "tb_key_schedule", "dc/d71/enumtb__key__schedule.html", null ],
       [ "tb_round_function_encrypt_decrypt", "de/d77/enumtb__round__function__encrypt__decrypt.html", null ]
     ] ],
     [ "key_schedule", "d4/daf/enumkey__schedule.html", null ],
     [ "key_schedule_encrypt", null, [
       [ "cipher_control_module_encrypt", "df/d49/enumcipher__control__module__encrypt.html", null ]
+    ] ],
+    [ "round_ctr", null, [
+      [ "tb_key_schedule", "dc/d71/enumtb__key__schedule.html", null ]
     ] ],
     [ "round_decrypt", "d9/d37/enumround__decrypt.html", [
       [ "tb_round_function_encrypt_decrypt", "de/d77/enumtb__round__function__encrypt__decrypt.html", null ],
