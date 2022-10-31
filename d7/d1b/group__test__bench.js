@@ -36,7 +36,7 @@ var group__test__bench =
       [ "outKey", "d7/d1b/group__test__bench.html#gab3d790ed150c105819504c94ea263e28", null ],
       [ "state", "d7/d1b/group__test__bench.html#ga8e1c6e044ead837ed73e08690e5b246c", null ],
       [ "finished", "d7/d1b/group__test__bench.html#gaf41a2ba90c85756f61634305bedf18c0", null ],
-      [ "round_ctr", "d7/d1b/group__test__bench.html#gad2d7cccd33bcce4a05953164a8124c7d", null ]
+      [ "state", "d7/d1b/group__test__bench.html#gaa49dbd9fa9696df7395b75a6c4afb3b3", null ]
     ] ],
     [ "tb_round_function_encrypt_one_round", "db/d4d/enumtb__round__function__encrypt__one__round.html", [
       [ "clk", "d7/d1b/group__test__bench.html#ga9f9968ec39906bd7edef0c134a1627d3", null ],
@@ -69,6 +69,6 @@ var group__test__bench =
     [ "ciphertext", "d7/d1b/group__test__bench.html#gad103bbb5d51bbceb97e0cba182d6e9b9", null ],
     [ "finished", "d7/d1b/group__test__bench.html#gaaf8cf6b4f0a43b27a03ad995facde4d9", null ],
     [ "state", "d7/d1b/group__test__bench.html#ga8c2b7e4ac8d0feea8ef8bbe10399fb5f", null ],
-    [ "round_ctr", "d7/d1b/group__test__bench.html#gad2d7cccd33bcce4a05953164a8124c7d", null ],
-    [ "round_decrypt", "d7/d1b/group__test__bench.html#gac44ea425377355381b701317dc53356a", null ]
+    [ "round_decrypt", "d7/d1b/group__test__bench.html#gac44ea425377355381b701317dc53356a", null ],
+    [ "state", "d7/d1b/group__test__bench.html#gaa49dbd9fa9696df7395b75a6c4afb3b3", null ]
 ];

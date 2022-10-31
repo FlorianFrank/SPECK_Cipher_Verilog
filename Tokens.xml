@@ -276,10 +276,10 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>êÍsˇU</Name>
+      <Name>”ñÚU</Name>
       <APILanguage>verilog</APILanguage>
     </TokenIdentifier>
-    <Path>de/d82/group___x90_xEAs_xFF_u.html</Path>
+    <Path>dd/d97/group___xD3_x96_xF2_u.html</Path>
     <Abstract>Round functions executing the encryption of plaintext or decryption of ciphertext. //% Assign the measurment to variables (TODO: during production this should be done in the WAIT_FOR_START phase=. </Abstract>
   </Token>
   <Token>
@@ -440,13 +440,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>round_ctr</Name>
+      <Name>state</Name>
       <APILanguage>verilog</APILanguage>
       <Type>data</Type>
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gad2d7cccd33bcce4a05953164a8124c7d</Anchor>
+    <Anchor>gaa49dbd9fa9696df7395b75a6c4afb3b3</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1548,13 +1548,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>round_ctr</Name>
+      <Name>state</Name>
       <APILanguage>verilog</APILanguage>
       <Type>data</Type>
       <Scope>tb_key_schedule</Scope>
     </TokenIdentifier>
     <Path>d7/d1b/group__test__bench.html</Path>
-    <Anchor>gad2d7cccd33bcce4a05953164a8124c7d</Anchor>
+    <Anchor>gaa49dbd9fa9696df7395b75a6c4afb3b3</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
