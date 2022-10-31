@@ -72,7 +72,7 @@ module round_encrypt(
 
 			 //% Shift p0 to the right (typically 8 bit)
 			`SHIFT_ENCRYPT: begin
-				p0 <= shift_right(p0,SHIFT_WIDTH_P0);
+				p0 <= shift_right(p0,`SHIFT_WIDTH_P0);
 				inc_counter();
 			end
 
@@ -84,7 +84,7 @@ module round_encrypt(
 
 			 //% Calculate XOR with subkey of p0
 			`XOR_SUBKEY_SHIFT_P0_ENCRYPT: begin
-				p1 <= shift_left(p1,SHIFT_WIDTH_P1);
+				p1 <= shift_left(p1,`SHIFT_WIDTH_P1);
 				p0 <= p0 ^ subkey;
 				inc_counter();
 			end
