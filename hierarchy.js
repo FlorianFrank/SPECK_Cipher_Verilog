@@ -1,6 +1,9 @@
 var hierarchy =
 [
+    [ "decrypt", "da/d48/enumdecrypt.html", null ],
+    [ "encrypt", "d1/d1b/enumencrypt.html", null ],
     [ "i_gen", null, [
+      [ "encryption", "d3/d48/enumencryption.html", null ],
       [ "tb_round_function_encrypt_decrypt", "de/d77/enumtb__round__function__encrypt__decrypt.html", null ]
     ] ],
     [ "key_schedule", "d4/daf/enumkey__schedule.html", null ],
@@ -13,9 +16,6 @@ var hierarchy =
     ] ],
     [ "round_encrypt", "d8/d2b/enumround__encrypt.html", [
       [ "cipher_control_module_encrypt", "df/d49/enumcipher__control__module__encrypt.html", null ],
-      [ "encryption", "d3/d48/enumencryption.html", null ]
-    ] ],
-    [ "signal_start_key_schedule", null, [
       [ "encryption", "d3/d48/enumencryption.html", null ]
     ] ],
     [ "state", null, [

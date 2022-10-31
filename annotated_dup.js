@@ -1,6 +1,8 @@
 var annotated_dup =
 [
     [ "cipher_control_module_encrypt", "df/d49/enumcipher__control__module__encrypt.html", "df/d49/enumcipher__control__module__encrypt" ],
+    [ "decrypt", "da/d48/enumdecrypt.html", "da/d48/enumdecrypt" ],
+    [ "encrypt", "d1/d1b/enumencrypt.html", "d1/d1b/enumencrypt" ],
     [ "encryption", "d3/d48/enumencryption.html", "d3/d48/enumencryption" ],
     [ "key_schedule", "d4/daf/enumkey__schedule.html", "d4/daf/enumkey__schedule" ],
     [ "round_decrypt", "d9/d37/enumround__decrypt.html", "d9/d37/enumround__decrypt" ],

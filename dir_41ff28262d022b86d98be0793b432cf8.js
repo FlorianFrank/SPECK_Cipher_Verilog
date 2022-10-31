@@ -3,6 +3,8 @@ var dir_41ff28262d022b86d98be0793b432cf8 =
     [ "cipher_control_module_decrypt.v", "df/dfe/cipher__control__module__decrypt_8v.html", [
       [ "cipher_control_module_encrypt", "df/d49/enumcipher__control__module__encrypt.html", "df/d49/enumcipher__control__module__encrypt" ]
     ] ],
+    [ "decrypt.v", "db/d88/decrypt_8v.html", "db/d88/decrypt_8v" ],
+    [ "encrypt.v", "d1/d59/encrypt_8v.html", "d1/d59/encrypt_8v" ],
     [ "encryption.v", "d8/de5/encryption_8v.html", [
       [ "encryption", "d3/d48/enumencryption.html", "d3/d48/enumencryption" ]
     ] ],

@@ -5,7 +5,7 @@ digraph "encryption"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node0 [label="encryption",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node1 -> Node0 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="signal_start_key_schedule",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 [label="i_gen",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node2 -> Node0 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="round_encrypt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d2b/enumround__encrypt.html"];
 }
