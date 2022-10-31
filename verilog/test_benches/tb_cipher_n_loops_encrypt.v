@@ -88,20 +88,20 @@ endgenerate
 		
 		`WAIT_FOR_START_SIGNAL: begin
 			if(start == 1)
-				state = state + 1;
+				state = `START_KEY_SCHEDULE;
 		end
 
 		`START_KEY_SCHEDULE: begin
 				if(round_ctr == 0)
 					$display("Iteration %d p0: %x p1: %x k0: %x k1: %x\n", 0, plaintext[63:0], plaintext[127:64], key[63:0], key[127:64]);
 				signal_start_rd[round_ctr] = 1'b1;
-				state = state + 1;
+				state = `STOP_KEY_SCHEDULE;
 		end
 
-		`STOP_KEY_SCHEDULE : begin
+		`STOP_KEY_SCHEDULE: begin
 			signal_start_rd[round_ctr] = 1'b0;
 			if(signal_finished_rd[round_ctr] == 1) begin
-				state = state + 1;
+				state = `START_ROUND;
 				$display("Iteration %d p0: %x p1: %x", round_ctr,
 				ciphertext[round_ctr][63:0], ciphertext[round_ctr][128:64]);
 			end
@@ -109,13 +109,13 @@ endgenerate
 
 		`START_ROUND: begin
 			signal_start_ks[round_ctr] = 1'b1;
-			state = state + 1;
+			state = `STOP_ROUND;
 		end
 
 		`STOP_ROUND: begin
 			signal_start_ks[round_ctr] = 1'b0;
 			if(signal_finished_ks[round_ctr] == 1) begin
-				state = state + 1;
+				state = `ITERATE_CTR;
 			end
 		end
 
@@ -127,11 +127,11 @@ endgenerate
 				state = `START_KEY_SCHEDULE;
 			end
 			else 
-				state = state + 1;
+				state = `DONE;
 		end
 		
 		`DONE: begin
-			$display("Done p0: %x p1: %x", iphertext[round_ctr][63:0], ciphertext[round_ctr][128:64]);
+			$display("Done p0: %x p1: %x", ciphertext[round_ctr][63:0], ciphertext[round_ctr][128:64]);
 			$stop;
 		end
 
