@@ -28,10 +28,10 @@ module round_decrypt(
 
 	//% Counter of the state machine
 	 reg [4:0] state = 0;
-	 
+
 	 reg [`BLOCK_SIZE-1:0] c0;
 	 reg [`BLOCK_SIZE-1:0] c1;
-	 
+
 	 task inc_counter;
 		begin
 			if(state < `MAX_STATE)
@@ -40,7 +40,7 @@ module round_decrypt(
 				state = 0;
 		end
 	 endtask
-	 
+
 	 function automatic [`BLOCK_SIZE-1:0] shift_right_reverse;
 		 input [`BLOCK_SIZE-1:0] in;
 		 input [3:0] shiftwidth;
@@ -48,7 +48,7 @@ module round_decrypt(
 			shift_right_reverse = (in <<< shiftwidth) | (in >>> (`BLOCK_SIZE - shiftwidth));
 		 end
 	 endfunction
-	 
+
 	 function automatic [`BLOCK_SIZE-1:0] shift_left_reverse;
 		 input [`BLOCK_SIZE-1:0] in;
 		 input [3:0] shiftwidth;
@@ -56,13 +56,13 @@ module round_decrypt(
 			shift_left_reverse = (in >>> shiftwidth) | (in <<< (`BLOCK_SIZE - shiftwidth));
 		 end
 	 endfunction
-	 
+
 	 initial begin
 		state <= 0;
 		finished <= 0;
 	 end
-	 
-	 
+
+
 	 always @ (posedge clk) begin
 
 		 case(state)
@@ -80,7 +80,7 @@ module round_decrypt(
 			end
 
 			`XOR_C0_C1_DECRYPT: begin
-				c1 <= c0 ^ p1;
+				c1 <= c0 ^ c1;
 				inc_counter();
 			end
 
@@ -96,7 +96,7 @@ module round_decrypt(
 			end
 
 			`SHIFT_DECRYPT: begin
-				c0 <= shift_right_reverse(p0, `SHIFT_WIDTH_P0);
+				c0 <= shift_right_reverse(c0, `SHIFT_WIDTH_P0);
 				inc_counter();
 			end
 
@@ -107,7 +107,7 @@ module round_decrypt(
 				inc_counter();
 			end
 		endcase
-		
+
 	 end
 	assign state_response = state;
 endmodule

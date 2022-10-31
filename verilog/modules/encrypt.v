@@ -3,23 +3,22 @@
 `include "../defines/cipher_settings.vh"
 `include "../defines/main_module_defines.vh"
 
-//% \addtogroup test_bench Test Benches
+//% \addtogroup main_modules Main Modules
+//% @brief Main modules are the entry points to access the encryption and decryption algorithms.
 //% @{
-module tb_cipher_n_loops_encrypt(
+module encrypt(
+	//% Input clock driving the cipher
+	input wire clk,
+	
+	//% Start signal, must be toggled to logical 1 to start the encryption of one 
+	input wire start,
+	//% Is toggled to logical 1 and back to zero when all rounds are executed
+	output reg finished,
+	
+	input wire [`KEY_SIZE-1:0] plaintext,
+	input wire [`KEY_SIZE-1:0] key,
+	output reg [`KEY_SIZE-1:0] ciphertext
 	);
-
-//% Clock signal driving the cipher
-reg clk = 0;
-
-//% Always block driving the input clock
-initial begin
-	forever #1 clk = ~clk;
-end
-
-//% Plaintext to encrypt
-reg [127:0]plaintext  = 128'hCF1688B3FBC40C13472D4B6150645367;
-//% 128-bit key used for the encryption
-reg [127:0]key        = 128'h472D4B6150645367753778214125442A;
 
 //% Array of signals to start a specific key schedule. (One signal per round)
 reg [`NR_ROUNDS-1:0] signal_start_ks = 0;
@@ -34,7 +33,7 @@ wire [`NR_ROUNDS-1:0] signal_finished_rd;
 wire [127:0] subkeys[`NR_ROUNDS-1:0];
 //% Temporary variable holding the ciphertext shared between the different round functions 
 //% (TODO during production this should be done directly on the plaintext variable)
-wire [127:0] ciphertext[`NR_ROUNDS-1:0];
+wire [127:0] ciphertext_local[`NR_ROUNDS-1:0];
 
 //% Counter storing the current round to select the correct round function and key schedule
 integer round_ctr = 0;
@@ -47,9 +46,6 @@ wire [3:0] round_schedule_state [`NR_ROUNDS-1:0];
 //% Round counter which is XOR'ed to each key schedule. See official cipher description
 reg[63:0] static_round_ctr [`NR_ROUNDS-1:0];
 
-//% Signal indicating to start the execution of the cipher.
-reg start = 1;
-
 //% State variable holding the current state of the state machine.
 reg [2:0] state = 3'b0;
 
@@ -57,7 +53,7 @@ reg [2:0] state = 3'b0;
 reg[63:0] i;
 initial begin
 	for (i = 0; i < `NR_ROUNDS; i = i + 1) begin
-		static_round_ctr [i] = i;
+		static_round_ctr [i] <= i;
 	end
 end
 
@@ -70,13 +66,13 @@ generate
 			key_schedule key_schedule(.clk(clk), .signal_start(signal_start_ks[i_gen]), .finished(signal_finished_ks[i_gen]),
 													 .key(key), .round_ctr(static_round_ctr[i_gen]), .outKey(subkeys[i_gen]), .state_response(key_schedule_state[i_gen]));
 			round_encrypt round (.clk(clk), .signal_start(signal_start_rd[i_gen]), .subkey(key[127:64]), .plaintext(plaintext),
-									.ciphertext(ciphertext[i_gen]), .finished(signal_finished_rd[i_gen]), .state_response(round_schedule_state[i_gen]));
+									.ciphertext(ciphertext_local[i_gen]), .finished(signal_finished_rd[i_gen]), .state_response(round_schedule_state[i_gen]));
 		end
 		else begin
 		key_schedule key_schedule(.clk(clk), .signal_start(signal_start_ks[i_gen]), .finished(signal_finished_ks[i_gen]),
 													 .key(subkeys[i_gen-1]), .round_ctr(static_round_ctr[i_gen]), .outKey(subkeys[i_gen]), .state_response(key_schedule_state[i_gen]));
-		round_encrypt round (.clk(clk), .signal_start(signal_start_rd[i_gen]), .subkey(subkeys[i_gen-1][127:64]), .plaintext(ciphertext[i_gen -1]),
-					.ciphertext(ciphertext[i_gen]), .finished(signal_finished_rd[i_gen]), .state_response(round_schedule_state[i_gen]));
+		round_encrypt round (.clk(clk), .signal_start(signal_start_rd[i_gen]), .subkey(subkeys[i_gen-1][127:64]), .plaintext(ciphertext_local[i_gen -1]),
+					.ciphertext(ciphertext_local[i_gen]), .finished(signal_finished_rd[i_gen]), .state_response(round_schedule_state[i_gen]));
 		end
 	end
 endgenerate
@@ -86,57 +82,54 @@ endgenerate
 
 		case (state)
 		
-		`WAIT_FOR_START_SIGNAL: begin
-			if(start == 1)
-				state = `START_KEY_SCHEDULE;
-		end
-
-		`START_KEY_SCHEDULE: begin
-				if(round_ctr == 0)
-					$display("Iteration %d p0: %x p1: %x k0: %x k1: %x\n", 0, plaintext[63:0], plaintext[127:64], key[63:0], key[127:64]);
-				signal_start_rd[round_ctr] = 1'b1;
-				state = `STOP_KEY_SCHEDULE;
-		end
-
-		`STOP_KEY_SCHEDULE: begin
-			signal_start_rd[round_ctr] = 1'b0;
-			if(signal_finished_rd[round_ctr] == 1) begin
-				state = `START_ROUND;
-				$display("Iteration %d p0: %x p1: %x", round_ctr,
-				ciphertext[round_ctr][63:0], ciphertext[round_ctr][128:64]);
+			`WAIT_FOR_START_SIGNAL: begin
+				if(start == 1)
+					state <= state + 1;
+				finished <= 0;
 			end
-		end
 
-		`START_ROUND: begin
-			signal_start_ks[round_ctr] = 1'b1;
-			state = `STOP_ROUND;
-		end
-
-		`STOP_ROUND: begin
-			signal_start_ks[round_ctr] = 1'b0;
-			if(signal_finished_ks[round_ctr] == 1) begin
-				state = `ITERATE_CTR;
+			`START_KEY_SCHEDULE: begin
+					signal_start_rd[round_ctr] <= 1'b1;
+					state <= state + 1;
 			end
-		end
 
-		`ITERATE_CTR: begin
-			if(round_ctr < `NR_ROUNDS-1) begin
-				$display("Iteration %d k0: %x k1: %x", round_ctr,
-				subkeys[round_ctr][63:0], subkeys[round_ctr][128:64]);
-				round_ctr = round_ctr + 1;
-				state = `START_KEY_SCHEDULE;
+			`STOP_KEY_SCHEDULE : begin
+				signal_start_rd[round_ctr] <= 1'b0;
+				if(signal_finished_rd[round_ctr] == 1) begin
+					state <= state + 1;
+				end
 			end
-			else 
-				state = `DONE;
-		end
-		
-		`DONE: begin
-			$display("Done p0: %x p1: %x", ciphertext[round_ctr][63:0], ciphertext[round_ctr][128:64]);
-			$stop;
-		end
+
+			`START_ROUND: begin
+				signal_start_ks[round_ctr] <= 1'b1;
+				state <= state + 1;
+			end
+
+			`STOP_ROUND: begin
+				signal_start_ks[round_ctr] <= 1'b0;
+				if(signal_finished_ks[round_ctr] == 1) begin
+					state <= state + 1;
+				end
+			end
+
+			`ITERATE_CTR: begin
+				if(round_ctr < `NR_ROUNDS-1) begin
+					round_ctr <= round_ctr + 1;
+					state <= `START_KEY_SCHEDULE;
+				end
+				else 
+					state <= state + 1;
+			end
+			
+			`DONE: begin
+				finished <= 1;
+				state <= `WAIT_FOR_START_SIGNAL;
+			end
 
 		endcase
 	end
+
+	assign cihertext = ciphertext_local[`NR_ROUNDS-1];
 
 endmodule
 //% @}
