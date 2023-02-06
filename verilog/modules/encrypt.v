@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
-`include "../defines/cipher_settings.vh"
-`include "../defines/main_module_defines.vh"
+`include "cipher_settings.vh"
+`include "main_module_defines.vh"
 
 //% \addtogroup main_modules Main Modules
 //% @brief Main modules are the entry points to access the encryption and decryption algorithms.
@@ -12,12 +12,16 @@ module encrypt(
 	
 	//% Start signal, must be toggled to logical 1 to start the encryption of one 
 	input wire start,
-	//% Is toggled to logical 1 and back to zero when all rounds are executed
-	output reg finished,
 	
 	input wire [`KEY_SIZE-1:0] plaintext,
 	input wire [`KEY_SIZE-1:0] key,
-	output reg [`KEY_SIZE-1:0] ciphertext
+	output reg [`KEY_SIZE-1:0] ciphertext,
+	
+	
+	output reg active,
+	
+	//% Is toggled to logical 1 and back to zero when all rounds are executed
+	output reg ready
 	);
 
 //% Array of signals to start a specific key schedule. (One signal per round)

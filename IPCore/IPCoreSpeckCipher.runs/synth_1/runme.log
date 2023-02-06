@@ -1,0 +1,317 @@
+
+*** Running vivado
+    with args -log decrypt.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source decrypt.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source decrypt.tcl -notrace
+Command: synth_design -top decrypt -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19036
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/home/user/Documents/Florian/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/modules/general_functions.v:13]
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/home/user/Documents/Florian/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/modules/general_functions.v:22]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2921.867 ; gain = 0.000 ; free physical = 19512 ; free virtual = 26664
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'decrypt' [/home/user/Documents/Florian/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/modules/decrypt.v:9]
+WARNING: [Synth 8-6896] index 31 out of range inside initial block, initial block items will be ignored [/home/user/Documents/Florian/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/modules/decrypt.v:57]
+INFO: [Synth 8-6157] synthesizing module 'key_schedule' [/home/user/Documents/Florian/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/modules/key_schedule.v:10]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/user/Documents/Florian/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/modules/key_schedule.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'key_schedule' (0#1) [/home/user/Documents/Florian/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/modules/key_schedule.v:10]
+INFO: [Synth 8-6157] synthesizing module 'round_decrypt' [/home/user/Documents/Florian/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/modules/round_decrypt.v:8]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/user/Documents/Florian/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/modules/round_decrypt.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'round_decrypt' (0#1) [/home/user/Documents/Florian/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/modules/round_decrypt.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'decrypt' (0#1) [/home/user/Documents/Florian/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/verilog/modules/decrypt.v:9]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2921.867 ; gain = 0.000 ; free physical = 20532 ; free virtual = 27691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2921.867 ; gain = 0.000 ; free physical = 20598 ; free virtual = 27757
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2929.871 ; gain = 8.004 ; free physical = 20597 ; free virtual = 27756
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'key_schedule'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'round_decrypt'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'decrypt'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                             0000
+                 iSTATE0 |                              001 |                             0001
+                 iSTATE1 |                              010 |                             0010
+                 iSTATE2 |                              011 |                             0011
+                 iSTATE3 |                              100 |                             0100
+                 iSTATE4 |                              101 |                             0101
+                 iSTATE5 |                              110 |                             0110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'key_schedule'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                            00000
+                 iSTATE0 |                              001 |                            00001
+                 iSTATE1 |                              010 |                            00010
+                 iSTATE2 |                              011 |                            00011
+                 iSTATE3 |                              100 |                            00100
+                 iSTATE4 |                              101 |                            00101
+                 iSTATE5 |                              110 |                            00110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'round_decrypt'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE3 |                              001 |                              001
+                 iSTATE1 |                              010 |                              010
+                 iSTATE2 |                              011 |                              111
+                 iSTATE6 |                              100 |                              011
+                 iSTATE4 |                              101 |                              100
+                 iSTATE5 |                              110 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'decrypt'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2929.871 ; gain = 8.004 ; free physical = 20527 ; free virtual = 27694
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   64 Bit       Adders := 31    
+	   2 Input   64 Bit       Adders := 31    
+	   2 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     64 Bit         XORs := 124   
++---Registers : 
+	              128 Bit    Registers := 62    
+	               64 Bit    Registers := 124   
+	               32 Bit    Registers := 1     
+	               31 Bit    Registers := 2     
+	                4 Bit    Registers := 31    
+	                1 Bit    Registers := 63    
++---Muxes : 
+	   7 Input   64 Bit        Muxes := 124   
+	   2 Input   32 Bit        Muxes := 1     
+	   7 Input   32 Bit        Muxes := 1     
+	   7 Input   31 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 31    
+	   8 Input    4 Bit        Muxes := 31    
+	   7 Input    4 Bit        Muxes := 31    
+	   7 Input    3 Bit        Muxes := 63    
+	   2 Input    3 Bit        Muxes := 4     
+	   7 Input    1 Bit        Muxes := 375   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2929.871 ; gain = 8.004 ; free physical = 19928 ; free virtual = 27222
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2929.871 ; gain = 8.004 ; free physical = 19927 ; free virtual = 27222
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2929.871 ; gain = 8.004 ; free physical = 19956 ; free virtual = 27237
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2929.871 ; gain = 8.004 ; free physical = 19967 ; free virtual = 27241
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2929.871 ; gain = 8.004 ; free physical = 19967 ; free virtual = 27241
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2929.871 ; gain = 8.004 ; free physical = 19963 ; free virtual = 27237
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2929.871 ; gain = 8.004 ; free physical = 19963 ; free virtual = 27237
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2929.871 ; gain = 8.004 ; free physical = 19961 ; free virtual = 27239
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2929.871 ; gain = 8.004 ; free physical = 19961 ; free virtual = 27239
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |  1000|
+|3     |LUT2   |  4030|
+|4     |LUT3   |   341|
+|5     |LUT4   |  2148|
+|6     |LUT5   |  2085|
+|7     |LUT6   |  5969|
+|8     |MUXF7  |     8|
+|9     |FDRE   | 16153|
+|10    |IBUF   |   258|
+|11    |OBUF   |   129|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------------------+-----------------+------+
+|      |Instance                     |Module           |Cells |
++------+-----------------------------+-----------------+------+
+|1     |top                          |                 | 32122|
+|2     |  \genblk1[0].key_schedule   |key_schedule     |   478|
+|3     |  \genblk1[0].round          |round_decrypt    |   539|
+|4     |  \genblk1[10].key_schedule  |key_schedule_0   |   478|
+|5     |  \genblk1[10].round         |round_decrypt_1  |   539|
+|6     |  \genblk1[11].key_schedule  |key_schedule_2   |   480|
+|7     |  \genblk1[11].round         |round_decrypt_3  |   541|
+|8     |  \genblk1[12].key_schedule  |key_schedule_4   |   478|
+|9     |  \genblk1[12].round         |round_decrypt_5  |   539|
+|10    |  \genblk1[13].key_schedule  |key_schedule_6   |   478|
+|11    |  \genblk1[13].round         |round_decrypt_7  |   539|
+|12    |  \genblk1[14].key_schedule  |key_schedule_8   |   478|
+|13    |  \genblk1[14].round         |round_decrypt_9  |   539|
+|14    |  \genblk1[15].key_schedule  |key_schedule_10  |   479|
+|15    |  \genblk1[15].round         |round_decrypt_11 |   540|
+|16    |  \genblk1[16].key_schedule  |key_schedule_12  |   478|
+|17    |  \genblk1[16].round         |round_decrypt_13 |   539|
+|18    |  \genblk1[17].key_schedule  |key_schedule_14  |   478|
+|19    |  \genblk1[17].round         |round_decrypt_15 |   539|
+|20    |  \genblk1[18].key_schedule  |key_schedule_16  |   478|
+|21    |  \genblk1[18].round         |round_decrypt_17 |   539|
+|22    |  \genblk1[19].key_schedule  |key_schedule_18  |   480|
+|23    |  \genblk1[19].round         |round_decrypt_19 |   541|
+|24    |  \genblk1[1].key_schedule   |key_schedule_20  |   478|
+|25    |  \genblk1[1].round          |round_decrypt_21 |   539|
+|26    |  \genblk1[20].key_schedule  |key_schedule_22  |   478|
+|27    |  \genblk1[20].round         |round_decrypt_23 |   539|
+|28    |  \genblk1[21].key_schedule  |key_schedule_24  |   478|
+|29    |  \genblk1[21].round         |round_decrypt_25 |   539|
+|30    |  \genblk1[22].key_schedule  |key_schedule_26  |   478|
+|31    |  \genblk1[22].round         |round_decrypt_27 |   539|
+|32    |  \genblk1[23].key_schedule  |key_schedule_28  |   479|
+|33    |  \genblk1[23].round         |round_decrypt_29 |   540|
+|34    |  \genblk1[24].key_schedule  |key_schedule_30  |   478|
+|35    |  \genblk1[24].round         |round_decrypt_31 |   539|
+|36    |  \genblk1[25].key_schedule  |key_schedule_32  |   478|
+|37    |  \genblk1[25].round         |round_decrypt_33 |   539|
+|38    |  \genblk1[26].key_schedule  |key_schedule_34  |   478|
+|39    |  \genblk1[26].round         |round_decrypt_35 |   539|
+|40    |  \genblk1[27].key_schedule  |key_schedule_36  |   483|
+|41    |  \genblk1[27].round         |round_decrypt_37 |   543|
+|42    |  \genblk1[28].key_schedule  |key_schedule_38  |   478|
+|43    |  \genblk1[28].round         |round_decrypt_39 |   539|
+|44    |  \genblk1[29].key_schedule  |key_schedule_40  |   478|
+|45    |  \genblk1[29].round         |round_decrypt_41 |   539|
+|46    |  \genblk1[2].key_schedule   |key_schedule_42  |   478|
+|47    |  \genblk1[2].round          |round_decrypt_43 |   539|
+|48    |  \genblk1[30].key_schedule  |key_schedule_44  |   415|
+|49    |  \genblk1[30].round         |round_decrypt_45 |   540|
+|50    |  \genblk1[3].key_schedule   |key_schedule_46  |   480|
+|51    |  \genblk1[3].round          |round_decrypt_47 |   541|
+|52    |  \genblk1[4].key_schedule   |key_schedule_48  |   478|
+|53    |  \genblk1[4].round          |round_decrypt_49 |   539|
+|54    |  \genblk1[5].key_schedule   |key_schedule_50  |   478|
+|55    |  \genblk1[5].round          |round_decrypt_51 |   539|
+|56    |  \genblk1[6].key_schedule   |key_schedule_52  |   478|
+|57    |  \genblk1[6].round          |round_decrypt_53 |   539|
+|58    |  \genblk1[7].key_schedule   |key_schedule_54  |   479|
+|59    |  \genblk1[7].round          |round_decrypt_55 |   540|
+|60    |  \genblk1[8].key_schedule   |key_schedule_56  |   478|
+|61    |  \genblk1[8].round          |round_decrypt_57 |   539|
+|62    |  \genblk1[9].key_schedule   |key_schedule_58  |   478|
+|63    |  \genblk1[9].round          |round_decrypt_59 |   539|
++------+-----------------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2929.871 ; gain = 8.004 ; free physical = 19961 ; free virtual = 27239
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2929.871 ; gain = 8.004 ; free physical = 19962 ; free virtual = 27239
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2929.879 ; gain = 8.004 ; free physical = 19962 ; free virtual = 27239
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2929.879 ; gain = 0.000 ; free physical = 20036 ; free virtual = 27314
+INFO: [Netlist 29-17] Analyzing 1008 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2985.898 ; gain = 0.000 ; free physical = 19911 ; free virtual = 27222
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: da4c50d1
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 2985.898 ; gain = 72.035 ; free physical = 20142 ; free virtual = 27452
+INFO: [Common 17-1381] The checkpoint '/home/user/Documents/Florian/Self-Encrypting-Memory/code/SPECK_Cipher_Verilog/IPCore/IPCoreSpeckCipher.runs/synth_1/decrypt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file decrypt_utilization_synth.rpt -pb decrypt_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 19 14:33:07 2023...
