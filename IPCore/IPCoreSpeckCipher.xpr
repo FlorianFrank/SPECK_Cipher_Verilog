@@ -198,6 +198,7 @@
       <File Path="$PPRDIR/../../ip_cores/ciphers/speck/decrypt/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
+      <File Path="$PPRDIR/../../ip_cores/ciphers/speck/encrypt/component.xml"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="decrypt"/>

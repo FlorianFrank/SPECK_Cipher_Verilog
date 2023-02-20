@@ -12,10 +12,14 @@ module encrypt(
 	
 	//% Start signal, must be toggled to logical 1 to start the encryption of one 
 	input wire start,
+	input wire secret_storage_ready,
 	
 	input wire [`KEY_SIZE-1:0] plaintext,
 	input wire [`KEY_SIZE-1:0] key,
+	input wire [15:0] puf_response,
+	
 	output reg [`KEY_SIZE-1:0] ciphertext,
+	
 	
 	
 	output reg active,
