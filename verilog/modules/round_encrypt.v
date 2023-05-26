@@ -6,16 +6,19 @@
 //% \addtogroup round_function Round Function
 //% @brief Round functions executing the encryption of plaintext or decryption of ciphertext.
 //% @{
-module round_encrypt(
+module round_encrypt  #(
+    parameter integer KEY_SIZE = 128,
+    parameter integer BLOCK_SIZE = 64
+)(
 		//% Input clock running the state machine
 		input clk,
 
 		//% Subkey k1 which is XOR'ed with pt0
-		input [`BLOCK_SIZE-1:0] subkey,
+		input [BLOCK_SIZE-1:0] subkey,
 		//% The plaintext to encrypt. TODO: Check this should be block size!
-		input [`KEY_SIZE-1:0] plaintext,
+		input [KEY_SIZE-1:0] plaintext,
 		//% The resulting ciphertext after exexting this module
-		output reg[`KEY_SIZE-1:0] ciphertext,
+		output reg[KEY_SIZE-1:0] ciphertext,
 
 		//% Toggle the signal to 1 to start the round encrypt execution. (Must be reset until the cipher finishes)
 		input signal_start,
@@ -26,15 +29,34 @@ module round_encrypt(
 		output [3:0]state_response
     );
 	 
-	 `include "general_functions.v"
+function automatic [BLOCK_SIZE-1:0] shift_right;
+    input [BLOCK_SIZE-1:0] in;
+    input [4:0] shiftwidth;
+    begin
+        shift_right = (in >>> shiftwidth) | (in <<< (BLOCK_SIZE-1 - shiftwidth));
+    end
+endfunction
+
+function automatic [BLOCK_SIZE-1:0] shift_left;
+    input [BLOCK_SIZE-1:0] in;
+    input [4:0] shiftwidth;
+    begin
+        shift_left = (in <<< shiftwidth) | (in >>> (BLOCK_SIZE - shiftwidth));
+    end
+endfunction
+
+	 initial begin
+		state <= 0;
+		finished <= 0;
+	 end
 
 	//% Counter of the state machine
 	reg [4:0] state = 0;
 
 	//% First plaintext block
-	reg [`BLOCK_SIZE-1:0] p0;
+	reg [BLOCK_SIZE-1:0] p0;
 	//% Second plaintext block
-	reg [`BLOCK_SIZE-1:0] p1;
+	reg [BLOCK_SIZE-1:0] p1;
 
 	//% Increments the state of the state machine.
 	//% If the maximum number of states is reached reset to 0.
@@ -65,8 +87,8 @@ module round_encrypt(
 
 		 	//% Assign the measurment to variables (TODO: during production this should be done in the WAIT_FOR_START phase=
 			`ASSIGNMENT_ENCRYPT: begin
-				p0 <= plaintext[`BLOCK_SIZE-1:0];
-				p1 <= plaintext[`KEY_SIZE-1:`BLOCK_SIZE];
+				p0 <= plaintext[BLOCK_SIZE-1:0];
+				p1 <= plaintext[KEY_SIZE-1:BLOCK_SIZE];
 				inc_counter();
 			end
 
@@ -97,8 +119,8 @@ module round_encrypt(
 
 		 	//% Assign result to ciphertext varialbe (TODO: during production this should be merged with previous state)
 			`RESULT_ASSIGNMENT_ENCRYPT: begin
-				ciphertext[`BLOCK_SIZE-1:0] <= p0;
-				ciphertext [`KEY_SIZE -1:`BLOCK_SIZE] <= p1;
+				ciphertext[BLOCK_SIZE-1:0] <= p0;
+				ciphertext [KEY_SIZE -1:BLOCK_SIZE] <= p1;
 				finished <= 1;
 				inc_counter();
 			end

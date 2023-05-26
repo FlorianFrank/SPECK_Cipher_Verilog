@@ -5,17 +5,21 @@
 
 //% \addtogroup round_function Round Function
 //% @{
-module round_decrypt(
+module round_decrypt #(
+    parameter integer KEY_SIZE = 128,
+    parameter integer BLOCK_SIZE = 64
+)
+(
 		//% Input clock running the state machine
 		input clk,
 
 		//% Subkey k1 which is XOR'ed with pt0
-		input [`BLOCK_SIZE-1:0] subkey,
+		input [BLOCK_SIZE-1:0] subkey,
 
 		//% input cipher text splitted into c0 and c1
-		input [`KEY_SIZE-1:0] ciphertext,
+		input [KEY_SIZE-1:0] ciphertext,
 		//% output plaintext of the current round
-		output reg[`KEY_SIZE-1:0] plaintext,
+		output reg[KEY_SIZE-1:0] plaintext,
 
 		//% Toggle the signal to 1 to start the round decrypt execution. (Must be reset until the cipher finishes)
 		input signal_start,
@@ -29,31 +33,39 @@ module round_decrypt(
 	//% Counter of the state machine
 	 reg [4:0] state = 0;
 
-	 reg [`BLOCK_SIZE-1:0] c0;
-	 reg [`BLOCK_SIZE-1:0] c1;
+	 reg [BLOCK_SIZE-1:0] c0 = 0;
+	 reg [BLOCK_SIZE-1:0] c1 = 0;
+	 
+	 initial begin
+	   plaintext <= 0;
+	   finished <= 0;
+	   state <= 0;
+	   c0 <= 0;
+	   c1 <= 0;
+	 end
 
 	 task inc_counter;
 		begin
 			if(state < `MAX_STATE)
-				state = state + 1;
+				state <= state + 1;
 			else
-				state = 0;
+				state <= 0;
 		end
 	 endtask
 
-	 function automatic [`BLOCK_SIZE-1:0] shift_right_reverse;
-		 input [`BLOCK_SIZE-1:0] in;
+	 function automatic [BLOCK_SIZE-1:0] shift_right_reverse;
+		 input [BLOCK_SIZE-1:0] in;
 		 input [3:0] shiftwidth;
 		 begin
-			shift_right_reverse = (in <<< shiftwidth) | (in >>> (`BLOCK_SIZE - shiftwidth));
+			shift_right_reverse = (in <<< shiftwidth) | (in >>> (BLOCK_SIZE - shiftwidth));
 		 end
 	 endfunction
 
-	 function automatic [`BLOCK_SIZE-1:0] shift_left_reverse;
-		 input [`BLOCK_SIZE-1:0] in;
+	 function automatic [BLOCK_SIZE-1:0] shift_left_reverse;
+		 input [BLOCK_SIZE-1:0] in;
 		 input [3:0] shiftwidth;
 		 begin
-			shift_left_reverse = (in >>> shiftwidth) | (in <<< (`BLOCK_SIZE - shiftwidth));
+			shift_left_reverse = (in >>> shiftwidth) | (in <<< (BLOCK_SIZE - shiftwidth));
 		 end
 	 endfunction
 
@@ -74,8 +86,8 @@ module round_decrypt(
 			end
 
 			`ASSIGNMENT_DECRYPT: begin
-				c0 <= ciphertext[`BLOCK_SIZE-1:0];
-				c1 <= ciphertext[`KEY_SIZE-1:`BLOCK_SIZE];
+				c0 <= ciphertext[BLOCK_SIZE-1:0];
+				c1 <= ciphertext[KEY_SIZE-1:BLOCK_SIZE];
 				inc_counter();
 			end
 
@@ -101,8 +113,8 @@ module round_decrypt(
 			end
 
 			`RESULT_ASSIGNMENT_DECRYPT: begin
-				plaintext[`BLOCK_SIZE-1:0] <= c0;
-				plaintext[`KEY_SIZE-1:`BLOCK_SIZE] <= c1;
+				plaintext[BLOCK_SIZE-1:0] <= c0;
+				plaintext[KEY_SIZE-1:BLOCK_SIZE] <= c1;
 				finished <= 1;
 				inc_counter();
 			end
