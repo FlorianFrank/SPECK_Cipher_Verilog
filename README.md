@@ -1,5 +1,8 @@
 # Speck Cipher Veriog implementation
 
+**The implementaiton of this cipher is not complete an requires refinement! 
+Furthermore it uses multiple clock cycles within each round function which should be combined.**
+
 This repository contains a sample implementation of the SPECK64/128 cipher. 
 See [Reference](https://csrc.nist.gov/csrc/media/events/lightweight-cryptography-workshop-2015/documents/papers/session1-shors-paper.pdf).
 
