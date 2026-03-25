@@ -1,4 +1,4 @@
-# Speck Cipher Veriog implementation
+# Speck Cipher Veriog implementation (Currently under development, do not clone)
 
 **The implementaiton of this cipher is not complete an requires refinement! 
 Furthermore it uses multiple clock cycles within each round function which should be combined.**
